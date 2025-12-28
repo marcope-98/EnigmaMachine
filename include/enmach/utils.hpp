@@ -8,25 +8,25 @@
 namespace enmach::rotors
 {
   using namespace std::literals;
-  inline constexpr Rotor i     = "ekmflgdqvzntowyhxuspaibrcj"sv;
-  inline constexpr Rotor ii    = "ajdksiruxblhwtmcqgznpyfvoe"sv;
-  inline constexpr Rotor iii   = "bdfhjlcprtxvznyeiwgakmusqo"sv;
-  inline constexpr Rotor iv    = "esovpzjayquirhxlnftgkdcmwb"sv;
-  inline constexpr Rotor v     = "vzbrgityupsdnhlxawmjqofeck"sv;
-  inline constexpr Rotor vi    = "jpgvoumfyqbenhzrdkasxlictw"sv;
-  inline constexpr Rotor vii   = "nzjhgrcxmyswboufaivlpekqdt"sv;
-  inline constexpr Rotor viii  = "fkqhtlxocbjspdzramewniuygv"sv;
-  inline constexpr Rotor beta  = "leyjvcnixwpbqmdrtakzgfuhos"sv;
-  inline constexpr Rotor gamma = "fsokanuerhmbtiycwlqpzxvgjd"sv;
+  inline constexpr Rotor I     = "ekmflgdqvzntowyhxuspaibrcj"sv;
+  inline constexpr Rotor II    = "ajdksiruxblhwtmcqgznpyfvoe"sv;
+  inline constexpr Rotor III   = "bdfhjlcprtxvznyeiwgakmusqo"sv;
+  inline constexpr Rotor IV    = "esovpzjayquirhxlnftgkdcmwb"sv;
+  inline constexpr Rotor V     = "vzbrgityupsdnhlxawmjqofeck"sv;
+  inline constexpr Rotor VI    = "jpgvoumfyqbenhzrdkasxlictw"sv;
+  inline constexpr Rotor VII   = "nzjhgrcxmyswboufaivlpekqdt"sv;
+  inline constexpr Rotor VIII  = "fkqhtlxocbjspdzramewniuygv"sv;
+  inline constexpr Rotor BETA  = "leyjvcnixwpbqmdrtakzgfuhos"sv;
+  inline constexpr Rotor GAMMA = "fsokanuerhmbtiycwlqpzxvgjd"sv;
 } // namespace enmach::rotors
 
 namespace enmach::reflectors
 {
   using namespace std::literals;
-  inline constexpr Reflector b      = "yruhqsldpxngokmiebfzcwvjat"sv;
-  inline constexpr Reflector c      = "fvpjiaoyedrzxwgctkuqsbnmhl"sv;
-  inline constexpr Reflector b_dunn = "enkqauywjicopblmdxzvfthrgs"sv;
-  inline constexpr Reflector c_dunn = "rdobjntkvehmlfcwzaxgyipsuq"sv;
+  inline constexpr Reflector B      = "yruhqsldpxngokmiebfzcwvjat"sv;
+  inline constexpr Reflector C      = "fvpjiaoyedrzxwgctkuqsbnmhl"sv;
+  inline constexpr Reflector B_DUNN = "enkqauywjicopblmdxzvfthrgs"sv;
+  inline constexpr Reflector C_DUNN = "rdobjntkvehmlfcwzaxgyipsuq"sv;
 } // namespace enmach::reflectors
 
 #endif // ENMACH_UTILS_HPP_
