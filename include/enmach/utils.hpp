@@ -3,26 +3,30 @@
 
 #include <string_view>
 
+#include "enmach/types.hpp"
+
 namespace enmach::rotors
 {
-  inline constexpr std::string_view i     = "ekmflgdqvzntowyhxuspaibrcj";
-  inline constexpr std::string_view ii    = "ajdksiruxblhwtmcqgznpyfvoe";
-  inline constexpr std::string_view iii   = "bdfhjlcprtxvznyeiwgakmusqo";
-  inline constexpr std::string_view iv    = "esovpzjayquirhxlnftgkdcmwb";
-  inline constexpr std::string_view v     = "vzbrgityupsdnhlxawmjqofeck";
-  inline constexpr std::string_view vi    = "jpgvoumfyqbenhzrdkasxlictw";
-  inline constexpr std::string_view vii   = "nzjhgrcxmyswboufaivlpekqdt";
-  inline constexpr std::string_view viii  = "fkqhtlxocbjspdzramewniuygv";
-  inline constexpr std::string_view beta  = "leyjvcnixwpbqmdrtakzgfuhos";
-  inline constexpr std::string_view gamma = "fsokanuerhmbtiycwlqpzxvgjd";
+  using namespace std::literals;
+  inline constexpr Rotor i     = "ekmflgdqvzntowyhxuspaibrcj"sv;
+  inline constexpr Rotor ii    = "ajdksiruxblhwtmcqgznpyfvoe"sv;
+  inline constexpr Rotor iii   = "bdfhjlcprtxvznyeiwgakmusqo"sv;
+  inline constexpr Rotor iv    = "esovpzjayquirhxlnftgkdcmwb"sv;
+  inline constexpr Rotor v     = "vzbrgityupsdnhlxawmjqofeck"sv;
+  inline constexpr Rotor vi    = "jpgvoumfyqbenhzrdkasxlictw"sv;
+  inline constexpr Rotor vii   = "nzjhgrcxmyswboufaivlpekqdt"sv;
+  inline constexpr Rotor viii  = "fkqhtlxocbjspdzramewniuygv"sv;
+  inline constexpr Rotor beta  = "leyjvcnixwpbqmdrtakzgfuhos"sv;
+  inline constexpr Rotor gamma = "fsokanuerhmbtiycwlqpzxvgjd"sv;
 } // namespace enmach::rotors
 
 namespace enmach::reflectors
 {
-  inline constexpr std::string_view b      = "yruhqsldpxngokmiebfzcwvjat";
-  inline constexpr std::string_view c      = "fvpjiaoyedrzxwgctkuqsbnmhl";
-  inline constexpr std::string_view b_dunn = "enkqauywjicopblmdxzvfthrgs";
-  inline constexpr std::string_view c_dunn = "rdobjntkvehmlfcwzaxgyipsuq";
+  using namespace std::literals;
+  inline constexpr Reflector b      = "yruhqsldpxngokmiebfzcwvjat"sv;
+  inline constexpr Reflector c      = "fvpjiaoyedrzxwgctkuqsbnmhl"sv;
+  inline constexpr Reflector b_dunn = "enkqauywjicopblmdxzvfthrgs"sv;
+  inline constexpr Reflector c_dunn = "rdobjntkvehmlfcwzaxgyipsuq"sv;
 } // namespace enmach::reflectors
 
 #endif // ENMACH_UTILS_HPP_
