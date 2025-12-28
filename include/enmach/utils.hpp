@@ -1,5 +1,6 @@
 #ifndef ENMACH_UTILS_HPP_
 #define ENMACH_UTILS_HPP_
+
 #include <string_view>
 
 namespace enmach::rotors
