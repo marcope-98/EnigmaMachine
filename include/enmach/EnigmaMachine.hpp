@@ -20,6 +20,19 @@ namespace enmach
       this->increment_rotors();
       return this->inverse(this->reflect(this->forward(letter)));
     }
+    constexpr auto setRotorsConfiguration(const RotorsConfiguration &configuration) -> void
+    {
+      this->left_.setConfiguration(std::get<0>(configuration));
+      this->middle_.setConfiguration(std::get<1>(configuration));
+      this->right_.setConfiguration(std::get<2>(configuration));
+    }
+
+    constexpr auto getRotorsConfigurations() const -> RotorsConfiguration
+    {
+      return {this->left_.getConfiguration(),
+              this->middle_.getConfiguration(),
+              this->right_.getConfiguration()};
+    }
 
   private:
     constexpr auto increment_rotors() -> void
