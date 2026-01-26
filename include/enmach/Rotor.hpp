@@ -20,7 +20,10 @@ namespace enmach::rotor_tags
   struct BETA  { constexpr static std::string_view value = "leyjvcnixwpbqmdrtakzgfuhos"sv; };
   struct GAMMA { constexpr static std::string_view value = "fsokanuerhmbtiycwlqpzxvgjd"sv; };
   // clang-format on
+} // namespace enmach::rotor_tags
 
+namespace enmach
+{
   template<class RotorTag>
   struct Rotor
   {
@@ -31,7 +34,7 @@ namespace enmach::rotor_tags
 
     [[nodiscard]] constexpr auto inverse(char letter) const -> char
     {
-      return enmach::input.at(RotorTag::value.find(letter)); 
+      return enmach::input.at(RotorTag::value.find(letter));
     }
 
     [[nodiscard]] constexpr auto increment(bool condition) -> bool
@@ -39,7 +42,5 @@ namespace enmach::rotor_tags
       return condition && this->position == 0;
     }
   };
-  
-
-}
+} // namespace enmach
 #endif // ENMACH_ROTOR_HPP_
