@@ -9,7 +9,7 @@ namespace enmach::reflector_tags
 {
   using namespace std::literals;
   // clang-format off
-  struct UKW_A  { constexpr static std::string_view vlaue = "ejmzalyxvbwfcrquontspikhgd"sv; };
+  struct UKW_A  { constexpr static std::string_view value = "ejmzalyxvbwfcrquontspikhgd"sv; };
   struct UKW_B  { constexpr static std::string_view value = "yruhqsldpxngokmiebfzcwvjat"sv; }; 
   struct UKW_C  { constexpr static std::string_view value = "fvpjiaoyedrzxwgctkuqsbnmhl"sv; }; 
   struct B_DUNN { constexpr static std::string_view value = "enkqauywjicopblmdxzvfthrgs"sv; }; 
