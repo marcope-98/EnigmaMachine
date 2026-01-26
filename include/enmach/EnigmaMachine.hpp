@@ -77,6 +77,18 @@ namespace enmach
     {
       assign_inital_rotor_position_impl(std::forward<Tuple1>(t1), std::forward<Tuple2>(t2), std::make_index_sequence<Config::N>{});
     }
+
+    template<class Tuple1, class Tuple2, std::size_t... Is>
+    constexpr static auto assign_ringstellung_impl(Tuple1 &&t1, Tuple2 &&t2, std::index_sequence<Is...>) -> void
+    {
+      (std::get<Config::N - Is - 1>(t1).setRingstellung(std::get<Is>(t2)), ...);
+    }
+
+    template<class Tuple1, class Tuple2>
+    constexpr static auto assign_ringstellung(Tuple1 &&t1, Tuple2 &&t2) -> void
+    {
+      assign_ringstellung_impl(std::forward<Tuple1>(t1), std::forward<Tuple2>(t2), std::make_index_sequence<Config::N>{});
+    }
   };
 } // namespace enmach
 
