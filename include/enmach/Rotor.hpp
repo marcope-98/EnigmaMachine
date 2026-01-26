@@ -30,12 +30,12 @@ namespace enmach
   public:
     [[nodiscard]] constexpr auto forward(char letter) const -> char
     {
-      return RotorTag::value.at(enmach::input.find(letter));
+      return RotorTag::value.at(enmach::ETW.find(letter));
     }
 
     [[nodiscard]] constexpr auto inverse(char letter) const -> char
     {
-      return enmach::input.at(RotorTag::value.find(letter));
+      return enmach::ETW.at(RotorTag::value.find(letter));
     }
 
     [[nodiscard]] constexpr auto increment(bool condition) -> bool

@@ -21,7 +21,7 @@ namespace enmach
   template<class ReflectorTag>
   struct Reflector
   {
-    [[nodiscard]] constexpr auto reflect(char letter) const -> char { return ReflectorTag::value.at(enmach::input.find(letter)); }
+    [[nodiscard]] constexpr auto reflect(char letter) const -> char { return ReflectorTag::value.at(enmach::ETW.find(letter)); }
   };
 } // namespace enmach
 

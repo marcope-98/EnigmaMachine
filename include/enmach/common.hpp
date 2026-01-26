@@ -5,7 +5,7 @@
 
 namespace enmach
 {
-  inline constexpr std::string_view input = "abcdefghijklmnopqrstuvwxyz";
+  inline constexpr std::string_view ETW = "abcdefghijklmnopqrstuvwxyz";
 } // namespace enmach
 
 #endif // ENMACH_COMMON_HPP_
