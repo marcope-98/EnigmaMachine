@@ -11,7 +11,6 @@ set(ENMACH_LIBRARY_NAME enmach)
 add_library(${ENMACH_LIBRARY_NAME}
   INTERFACE
   include/enmach/common.hpp
-  include/enmach/types.hpp
   include/enmach/utils.hpp
   include/enmach/EnigmaMachine.hpp
   include/enmach/Reflector.hpp
