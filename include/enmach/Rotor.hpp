@@ -40,13 +40,13 @@ namespace enmach
 
     [[nodiscard]] constexpr auto increment(bool condition) -> bool
     {
-      return condition && this->position == 0;
+      return condition && this->position_ == 0;
     }
 
-    constexpr auto setInitialPosition(std::size_t initial_position) -> void { this->position = initial_position; }
-
+    constexpr auto setInitialPosition(std::size_t initial_position) -> void { this->position_ = initial_position; }
   private:
-    std::size_t position{};
+    std::size_t position_{};
+    std::size_t ringstellung_{};
   };
 } // namespace enmach
 #endif // ENMACH_ROTOR_HPP_
