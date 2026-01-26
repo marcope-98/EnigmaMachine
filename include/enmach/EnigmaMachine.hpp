@@ -8,7 +8,6 @@
 #include "enmach/Rotor.hpp"
 #include "enmach/utils.hpp"
 
-
 namespace enmach
 {
   template<class AllowedRotors, class AllowedReflectors, std::size_t RequiredRotors>
@@ -19,7 +18,7 @@ namespace enmach
     constexpr static std::size_t N = RequiredRotors;
   };
 
-  template<class Config, class ReflectorTag, class... RotorTags>
+  template<class Config, class Plugboard, class ReflectorTag, class... RotorTags>
   struct EnigmaMachine
   {
     static_assert((sizeof...(RotorTags)) == Config::N);
@@ -27,9 +26,9 @@ namespace enmach
     static_assert((Config::Rotors::template is_in_set<RotorTags>() && ...));
     static_assert((Config::Reflectors::template is_in_set<ReflectorTag>()));
 
-    // TODO: Add plugboard
-    Reflector<ReflectorTag>                     reflector{};
     decltype(std::tuple<Rotor<RotorTags>...>{}) rotors;
+    Reflector<ReflectorTag>                     reflector{};
+    Plugboard                                   plugboard{};
 
     auto increment() -> void
     {
@@ -56,13 +55,13 @@ namespace enmach
 
     [[nodiscard]] constexpr auto exec(char letter) -> char
     {
-      // TODO: Add plugboard transformation
+      letter = this->plugboard(letter);
       std::apply([&letter](auto &&...args)
                  { ((letter = args.forward(letter)), ...); }, this->rotors);
       letter = reflector.reflect(letter);
       std::apply([&letter](auto &&...args)
                  { ((letter = args.inverse(letter)), ...); }, reverse_tuple(this->rotors));
-      // TODO: Add plugboard transformation
+      letter = this->plugboard(letter);
       return letter;
     }
   };
