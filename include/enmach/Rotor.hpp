@@ -44,7 +44,7 @@ namespace enmach
     }
 
     constexpr auto setInitialPosition(std::size_t initial_position) -> void { this->position_ = initial_position; }
-    constexpr auto setRingstellung(std::size_t ringstellung) -> void { this->ringstellung_ = ringstellung; }
+    constexpr auto setRingstellung(char ringstellung) -> void { this->ringstellung_ = ETW.find(ringstellung); }
 
   private:
     std::size_t position_{};
