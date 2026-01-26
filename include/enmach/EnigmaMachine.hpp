@@ -37,9 +37,8 @@ namespace enmach
     template<class... Args>
     constexpr auto setRingstellung(Args &&...args) -> void
     {
-      ((void)(args), ...);
-      // TODO: Add static assert check on arguments list
-      static_assert(false && "not implemented");
+      static_assert(Config::N == (sizeof...(Args)));
+      assign_ringstellung(this->rotors, std::make_tuple(args...));
     }
 
     template<class... Args>
