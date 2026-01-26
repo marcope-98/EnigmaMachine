@@ -9,9 +9,18 @@
 
 namespace enmach
 {
-  template<class ReflectorTag, class... Rotors>
+  template<class AllowedRotors, class AllowedReflectors, std::size_t RequiredRotors>
+  struct EnigmaMachineConfiguration
+  {
+    using Rotors                   = AllowedRotors;
+    using Reflectors               = AllowedReflectors;
+    constexpr static std::size_t N = RequiredRotors;
+  };
+
+  template<class Config, class ReflectorTag, class... Rotors>
   struct EnigmaMachine
   {
+    static_assert((sizeof...(Rotors)) == Config::N);
     // TODO: Add static assert check on arguments list
     // TODO: Add plugboard
     Reflector<ReflectorTag>      reflector{};
@@ -27,7 +36,7 @@ namespace enmach
     template<class... Args>
     constexpr auto setRingstellung(Args &&...args) -> void
     {
-      ((void)(args),...);
+      ((void)(args), ...);
       // TODO: Add static assert check on arguments list
       static_assert(false && "not implemented");
     }
@@ -35,7 +44,7 @@ namespace enmach
     template<class... Args>
     constexpr auto setRotorPosition(Args &&...args) -> void
     {
-      ((void)(args),...);
+      ((void)(args), ...);
       // TODO: Add static assert check on arguments list
       static_assert(false && "not implemented");
     }
