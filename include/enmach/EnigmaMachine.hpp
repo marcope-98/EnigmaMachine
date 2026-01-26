@@ -4,6 +4,7 @@
 #include <string_view>
 #include <tuple>
 
+#include "enmach/utils.hpp"
 #include "enmach/Reflector.hpp"
 #include "enmach/Rotor.hpp"
 
@@ -24,7 +25,7 @@ namespace enmach
     // TODO: Add static assert check on arguments list
     // TODO: Add plugboard
     Reflector<ReflectorTag>      reflector{};
-    std::tuple<Rotor<Rotors>...> rotors; // TODO: invert tuple types (tuple types should be in the order Right -> Left)
+    decltype(std::tuple<Rotor<Rotors>...>{}) rotors;
 
     auto increment() -> void
     {
@@ -56,7 +57,7 @@ namespace enmach
                  { ((letter = args.forward(letter)), ...); }, this->rotors);
       letter = reflector.reflect(letter);
       std::apply([&letter](auto &&...args)
-                 { ((letter = args.inverse(letter)), ...); }, this->rotors); // TODO: reverse the tuple (inverse transformation goes from Left -> Right)
+                 { ((letter = args.inverse(letter)), ...); }, reverse_tuple(this->rotors));
       // TODO: Add plugboard transformation
       return letter;
     }
