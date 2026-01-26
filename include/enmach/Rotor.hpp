@@ -10,10 +10,10 @@ namespace enmach::rotor_tags
   using namespace std::literals;
   // clang-format off
   struct I     { constexpr static std::string_view value = "ekmflgdqvzntowyhxuspaibrcj"sv; };
-  struct II    { constexpr static std::string_view value = "ajdksiruxblhwtmcqgznpyfvoe"sv; };
-  struct III   { constexpr static std::string_view value = "bdfhjlcprtxvznyeiwgakmusqo"sv; };
+  struct II    { constexpr static std::string_view value = "ajdksiruxblhwtmcqgznpyfvoe"sv; constexpr static std::string_view notch = "r"sv; };
+  struct III   { constexpr static std::string_view value = "bdfhjlcprtxvznyeiwgakmusqo"sv; constexpr static std::string_view notch = "w"sv; };
   struct IV    { constexpr static std::string_view value = "esovpzjayquirhxlnftgkdcmwb"sv; };
-  struct V     { constexpr static std::string_view value = "vzbrgityupsdnhlxawmjqofeck"sv; };
+  struct V     { constexpr static std::string_view value = "vzbrgityupsdnhlxawmjqofeck"sv; constexpr static std::string_view notch = "f"sv; };
   struct VI    { constexpr static std::string_view value = "jpgvoumfyqbenhzrdkasxlictw"sv; };
   struct VII   { constexpr static std::string_view value = "nzjhgrcxmyswboufaivlpekqdt"sv; };
   struct VIII  { constexpr static std::string_view value = "fkqhtlxocbjspdzramewniuygv"sv; };
@@ -47,7 +47,7 @@ namespace enmach
     [[nodiscard]] constexpr auto increment(bool condition) -> bool
     {
       this->position_ = (this->position_ + static_cast<std::size_t>(condition)) % enmach::ETW.size();
-      return condition && this->position_ == 0;
+      return condition && RotorTag::notch.find(ETW.at(this->position_)) != std::string_view::npos;
     }
 
     constexpr auto setInitialPosition(char initial_position) -> void { this->position_ = ETW.find(initial_position); }
