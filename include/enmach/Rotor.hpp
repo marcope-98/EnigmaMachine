@@ -27,6 +27,7 @@ namespace enmach
   template<class RotorTag>
   struct Rotor
   {
+  public:
     [[nodiscard]] constexpr auto forward(char letter) const -> char
     {
       return RotorTag::value.at(enmach::input.find(letter));
@@ -41,7 +42,10 @@ namespace enmach
     {
       return condition && this->position == 0;
     }
-    
+
+    constexpr auto setInitialPosition(std::size_t initial_position) -> void { this->position = initial_position; }
+
+  private:
     std::size_t position{};
   };
 } // namespace enmach
