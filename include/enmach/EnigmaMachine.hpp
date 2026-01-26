@@ -61,9 +61,9 @@ namespace enmach
     }
 
   private:
-    decltype(std::tuple<Rotor<RotorTags>...>{}) rotors;
-    Reflector<ReflectorTag>                     reflector{};
-    Plugboard                                   plugboard{};
+    decltype(reverse_tuple(std::tuple<Rotor<RotorTags>...>{})) rotors;
+    Reflector<ReflectorTag>                                    reflector{};
+    Plugboard                                                  plugboard{};
 
     template<class Tuple1, class Tuple2, std::size_t... Is>
     constexpr static auto assign_initial_rotor_position_impl(Tuple1 &&t1, Tuple2 &&t2, std::index_sequence<Is...>)
@@ -72,9 +72,9 @@ namespace enmach
     }
 
     template<class Tuple1, class Tuple2>
-    constexpr static auto assing_initial_rotor_position(Tuple1 &&t1, Tuple2 &&t2) -> void
+    constexpr static auto assign_initial_rotor_position(Tuple1 &&t1, Tuple2 &&t2) -> void
     {
-      assign_inital_rotor_position_impl(std::forward<Tuple1>(t1), std::forward<Tuple2>(t2), std::make_index_sequence<Config::N>{});
+      assign_initial_rotor_position_impl(std::forward<Tuple1>(t1), std::forward<Tuple2>(t2), std::make_index_sequence<Config::N>{});
     }
 
     template<class Tuple1, class Tuple2, std::size_t... Is>
