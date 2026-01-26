@@ -2,13 +2,12 @@
 #include <iostream>
 #include <string_view>
 
-
 using namespace std::literals;
 struct Plugboard
 
 {
   constexpr static std::string_view value = "dbcatuqmilkjhvozgrsefnwxyp"sv;
-  constexpr auto                    operator()(char letter) const -> char { return this->value.at(enmach::ETW.find(letter)); }
+  constexpr auto                    operator()(char letter) const -> char { return this->value.at(static_cast<std::size_t>(letter - 'a')); }
 };
 
 int main(void)

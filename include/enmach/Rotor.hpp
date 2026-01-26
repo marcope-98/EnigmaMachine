@@ -30,17 +30,17 @@ namespace enmach
   public:
     [[nodiscard]] constexpr auto forward(char letter) const -> char
     {
-      letter = enmach::ETW.at((enmach::ETW.find(letter) + this->position_ + enmach::ETW.size() - this->ringstellung_) % enmach::ETW.size());
-      letter = RotorTag::value.at(enmach::ETW.find(letter));
-      letter = enmach::ETW.at((enmach::ETW.find(letter) + enmach::ETW.size() - this->position_ + this->ringstellung_) % enmach::ETW.size());
+      std::size_t tmp = (static_cast<std::size_t>(letter - 'a') + this->position_ + enmach::ETW.size() - this->ringstellung_) % enmach::ETW.size();
+      letter          = RotorTag::value.at(tmp);
+      letter          = enmach::ETW.at((static_cast<std::size_t>(letter - 'a') + enmach::ETW.size() - this->position_ + this->ringstellung_) % enmach::ETW.size());
       return letter;
     }
 
     [[nodiscard]] constexpr auto inverse(char letter) const -> char
     {
-      letter = enmach::ETW.at((enmach::ETW.find(letter) + this->position_ + enmach::ETW.size() - this->ringstellung_) % enmach::ETW.size());
+      letter = enmach::ETW.at((static_cast<std::size_t>(letter - 'a') + this->position_ + enmach::ETW.size() - this->ringstellung_) % enmach::ETW.size());
       letter = enmach::ETW.at(RotorTag::value.find(letter));
-      letter = enmach::ETW.at((enmach::ETW.find(letter) + enmach::ETW.size() - this->position_ + this->ringstellung_) % enmach::ETW.size());
+      letter = enmach::ETW.at((static_cast<std::size_t>(letter - 'a') + enmach::ETW.size() - this->position_ + this->ringstellung_) % enmach::ETW.size());
       return letter;
     }
 
@@ -50,8 +50,8 @@ namespace enmach
       return condition && RotorTag::notch.find(ETW.at(this->position_)) != std::string_view::npos;
     }
 
-    constexpr auto setInitialPosition(char initial_position) -> void { this->position_ = ETW.find(initial_position); }
-    constexpr auto setRingstellung(char ringstellung) -> void { this->ringstellung_ = ETW.find(ringstellung); }
+    constexpr auto setInitialPosition(char initial_position) -> void { this->position_ = static_cast<std::size_t>(initial_position - 'a'); }
+    constexpr auto setRingstellung(char ringstellung) -> void { this->ringstellung_ = static_cast<std::size_t>(ringstellung - 'a'); }
 
   private:
     std::size_t position_{};
