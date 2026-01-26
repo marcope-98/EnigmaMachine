@@ -4,9 +4,10 @@
 #include <string_view>
 #include <tuple>
 
-#include "enmach/utils.hpp"
 #include "enmach/Reflector.hpp"
 #include "enmach/Rotor.hpp"
+#include "enmach/utils.hpp"
+
 
 namespace enmach
 {
@@ -21,10 +22,13 @@ namespace enmach
   template<class Config, class ReflectorTag, class... RotorTags>
   struct EnigmaMachine
   {
-    static_assert((sizeof...(Rotors)) == Config::N);
-    // TODO: Add static assert check on arguments list
+    static_assert((sizeof...(RotorTags)) == Config::N);
+    static_assert(is_unique<RotorTags...>);
+    static_assert((Config::Rotors::template is_in_set<RotorTags>() && ...));
+    static_assert((Config::Reflectors::template is_in_set<ReflectorTag>()));
+
     // TODO: Add plugboard
-    Reflector<ReflectorTag>      reflector{};
+    Reflector<ReflectorTag>                     reflector{};
     decltype(std::tuple<Rotor<RotorTags>...>{}) rotors;
 
     auto increment() -> void
