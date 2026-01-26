@@ -14,7 +14,7 @@ namespace enmach
   {
     // TODO: Add static assert check on arguments list
     // TODO: Add plugboard
-    Reflector<ReflectorTag>      reflectors{};
+    Reflector<ReflectorTag>      reflector{};
     std::tuple<Rotor<Rotors>...> rotors; // TODO: invert tuple types (tuple types should be in the order Right -> Left)
 
     auto increment() -> void
