@@ -41,6 +41,8 @@ namespace enmach
     {
       return condition && this->position == 0;
     }
+    
+    std::size_t position{};
   };
 } // namespace enmach
 #endif // ENMACH_ROTOR_HPP_
