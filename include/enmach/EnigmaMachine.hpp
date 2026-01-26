@@ -43,13 +43,15 @@ namespace enmach
     [[nodiscard]] constexpr auto exec(char letter) -> char
     {
       // TODO: Add plugboard transformation
-      std::apply([&letter](auto&& ...args) {((letter = args.forward(letter)), ...);}, this->rotors);
+      std::apply([&letter](auto &&...args)
+                 { ((letter = args.forward(letter)), ...); }, this->rotors);
       letter = reflector.reflect(letter);
-      std::apply([&letter](auto&& ...args) {((letter = args.inverse(letter)), ...);}, this->rotors); // TODO: reverse the tuple (inverse transformation goes from Left -> Right)
+      std::apply([&letter](auto &&...args)
+                 { ((letter = args.inverse(letter)), ...); }, this->rotors); // TODO: reverse the tuple (inverse transformation goes from Left -> Right)
       // TODO: Add plugboard transformation
       return letter;
     }
   };
-}
+} // namespace enmach
 
 #endif // ENMACH_ENIGMAMACHINE_HPP_
