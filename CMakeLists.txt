@@ -16,6 +16,7 @@ add_library(${ENMACH_LIBRARY_NAME}
   include/enmach/EnigmaMachine.hpp
   include/enmach/Reflector.hpp
   include/enmach/Rotor.hpp
+  include/enmach/enmach.hpp
 )
 
 add_library(${ENMACH_LIBRARY_NAME}::${ENMACH_LIBRARY_NAME} ALIAS ${ENMACH_LIBRARY_NAME})
