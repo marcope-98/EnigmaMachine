@@ -27,6 +27,7 @@ namespace enmach
     template<class... Args>
     constexpr auto setRingstellung(Args &&...args) -> void
     {
+      ((void)(args),...);
       // TODO: Add static assert check on arguments list
       static_assert(false && "not implemented");
     }
@@ -34,6 +35,7 @@ namespace enmach
     template<class... Args>
     constexpr auto setRotorPosition(Args &&...args) -> void
     {
+      ((void)(args),...);
       // TODO: Add static assert check on arguments list
       static_assert(false && "not implemented");
     }
