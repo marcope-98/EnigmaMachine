@@ -30,16 +30,23 @@ namespace enmach
   public:
     [[nodiscard]] constexpr auto forward(char letter) const -> char
     {
-      return RotorTag::value.at(enmach::ETW.find(letter));
+      letter = enmach::ETW.at((enmach::ETW.find(letter) + this->position_ + enmach::ETW.size() - this->ringstellung_) % enmach::ETW.size());
+      letter = RotorTag::value.at(enmach::ETW.find(letter));
+      letter = enmach::ETW.at((enmach::ETW.find(letter) + enmach::ETW.size() - this->position_ + this->ringstellung_) % enmach::ETW.size());
+      return letter;
     }
 
     [[nodiscard]] constexpr auto inverse(char letter) const -> char
     {
-      return enmach::ETW.at(RotorTag::value.find(letter));
+      letter = enmach::ETW.at((enmach::ETW.find(letter) + this->position_ + enmach::ETW.size() - this->ringstellung_) % enmach::ETW.size());
+      letter = enmach::ETW.at(RotorTag::value.find(letter));
+      letter = enmach::ETW.at((enmach::ETW.find(letter) + enmach::ETW.size() - this->position_ + this->ringstellung_) % enmach::ETW.size());
+      return letter;
     }
 
     [[nodiscard]] constexpr auto increment(bool condition) -> bool
     {
+      this->position_ = (this->position_ + static_cast<std::size_t>(condition)) % enmach::ETW.size();
       return condition && this->position_ == 0;
     }
 
