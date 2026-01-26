@@ -18,14 +18,14 @@ namespace enmach
     constexpr static std::size_t N = RequiredRotors;
   };
 
-  template<class Config, class ReflectorTag, class... Rotors>
+  template<class Config, class ReflectorTag, class... RotorTags>
   struct EnigmaMachine
   {
     static_assert((sizeof...(Rotors)) == Config::N);
     // TODO: Add static assert check on arguments list
     // TODO: Add plugboard
     Reflector<ReflectorTag>      reflector{};
-    decltype(std::tuple<Rotor<Rotors>...>{}) rotors;
+    decltype(std::tuple<Rotor<RotorTags>...>{}) rotors;
 
     auto increment() -> void
     {
