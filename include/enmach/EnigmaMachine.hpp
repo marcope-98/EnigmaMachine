@@ -21,14 +21,11 @@ namespace enmach
   template<class Config, class Plugboard, class ReflectorTag, class... RotorTags>
   struct EnigmaMachine
   {
+  public:
     static_assert((sizeof...(RotorTags)) == Config::N);
     static_assert(is_unique<RotorTags...>);
     static_assert((Config::Rotors::template is_in_set<RotorTags>() && ...));
     static_assert((Config::Reflectors::template is_in_set<ReflectorTag>()));
-
-    decltype(std::tuple<Rotor<RotorTags>...>{}) rotors;
-    Reflector<ReflectorTag>                     reflector{};
-    Plugboard                                   plugboard{};
 
     auto increment() -> void
     {
@@ -46,11 +43,10 @@ namespace enmach
     }
 
     template<class... Args>
-    constexpr auto setRotorPosition(Args &&...args) -> void
+    constexpr auto setInitialRotorPosition(Args &&...args) -> void
     {
-      ((void)(args), ...);
-      // TODO: Add static assert check on arguments list
-      static_assert(false && "not implemented");
+      static_assert(Config::N == (sizeof...(Args)));
+      assign_initial_rotor_position(this->rotors, std::make_tuple(args...));
     }
 
     [[nodiscard]] constexpr auto exec(char letter) -> char
@@ -63,6 +59,23 @@ namespace enmach
                  { ((letter = args.inverse(letter)), ...); }, reverse_tuple(this->rotors));
       letter = this->plugboard(letter);
       return letter;
+    }
+
+  private:
+    decltype(std::tuple<Rotor<RotorTags>...>{}) rotors;
+    Reflector<ReflectorTag>                     reflector{};
+    Plugboard                                   plugboard{};
+
+    template<class Tuple1, class Tuple2, std::size_t... Is>
+    constexpr static auto assign_initial_rotor_position_impl(Tuple1 &&t1, Tuple2 &&t2, std::index_sequence<Is...>)
+    {
+      (std::get<Config::N - Is - 1>(t1).setInitialPosition(std::get<Is>(t2)), ...);
+    }
+
+    template<class Tuple1, class Tuple2>
+    constexpr static auto assing_initial_rotor_position(Tuple1 &&t1, Tuple2 &&t2) -> void
+    {
+      assign_inital_rotor_position_impl(std::forward<Tuple1>(t1), std::forward<Tuple2>(t2), std::make_index_sequence<Config::N>{});
     }
   };
 } // namespace enmach
