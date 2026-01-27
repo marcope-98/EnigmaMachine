@@ -50,12 +50,15 @@ namespace enmach
 
     [[nodiscard]] constexpr auto exec(char letter) -> char
     {
-      letter = this->plugboard(letter);
-      std::apply([&letter](auto &&...args)
-                 { ((letter = args.forward(letter)), ...); }, this->rotors);
+      std::size_t index = static_cast<std::size_t>(this->plugboard(letter) - 'a');
+      std::apply([&index](auto &&...args)
+                 { ((index = args.forward(index)), ...); }, this->rotors);
+      letter = static_cast<char>(index + 'a');
       letter = reflector.reflect(letter);
-      std::apply([&letter](auto &&...args)
-                 { ((letter = args.inverse(letter)), ...); }, reverse_tuple(this->rotors));
+      index  = static_cast<std::size_t>(letter - 'a');
+      std::apply([&index](auto &&...args)
+                 { ((index = args.inverse(index)), ...); }, reverse_tuple(this->rotors));
+      letter = static_cast<char>(index + 'a');
       letter = this->plugboard(letter);
       return letter;
     }

@@ -28,20 +28,20 @@ namespace enmach
   struct Rotor
   {
   public:
-    [[nodiscard]] constexpr auto forward(char letter) const -> char
+    [[nodiscard]] constexpr auto forward(std::size_t index) const -> std::size_t
     {
-      std::size_t tmp = (static_cast<std::size_t>(letter - 'a') + this->position_ + enmach::ETW.size() - this->ringstellung_) % enmach::ETW.size();
-      letter          = RotorTag::fvalue.at(tmp);
-      letter          = enmach::ETW.at((static_cast<std::size_t>(letter - 'a') + enmach::ETW.size() - this->position_ + this->ringstellung_) % enmach::ETW.size());
-      return letter;
+      index = (index + this->position_ + enmach::ETW.size() - this->ringstellung_) % enmach::ETW.size();
+      index = static_cast<std::size_t>(RotorTag::fvalue.at(index) - 'a');
+      index = (index + enmach::ETW.size() - this->position_ + this->ringstellung_) % enmach::ETW.size();
+      return index;
     }
 
-    [[nodiscard]] constexpr auto inverse(char letter) const -> char
+    [[nodiscard]] constexpr auto inverse(std::size_t index) const -> std::size_t
     {
-      std::size_t tmp = (static_cast<std::size_t>(letter - 'a') + this->position_ + enmach::ETW.size() - this->ringstellung_) % enmach::ETW.size();
-      letter = RotorTag::rvalue.at(tmp);
-      letter = enmach::ETW.at((static_cast<std::size_t>(letter - 'a') + enmach::ETW.size() - this->position_ + this->ringstellung_) % enmach::ETW.size());
-      return letter;
+      index = (index + this->position_ + enmach::ETW.size() - this->ringstellung_) % enmach::ETW.size();
+      index = static_cast<std::size_t>(RotorTag::rvalue.at(index) - 'a');
+      index = (index + enmach::ETW.size() - this->position_ + this->ringstellung_) % enmach::ETW.size();
+      return index;
     }
 
     [[nodiscard]] constexpr auto increment(bool condition) -> bool
