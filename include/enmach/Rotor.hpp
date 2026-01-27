@@ -9,16 +9,16 @@ namespace enmach::rotor_tags
 {
   using namespace std::literals;
   // clang-format off
-  struct I     { constexpr static std::string_view value = "ekmflgdqvzntowyhxuspaibrcj"sv; };
-  struct II    { constexpr static std::string_view value = "ajdksiruxblhwtmcqgznpyfvoe"sv; constexpr static std::string_view notch = "r"sv; };
-  struct III   { constexpr static std::string_view value = "bdfhjlcprtxvznyeiwgakmusqo"sv; constexpr static std::string_view notch = "w"sv; };
-  struct IV    { constexpr static std::string_view value = "esovpzjayquirhxlnftgkdcmwb"sv; };
-  struct V     { constexpr static std::string_view value = "vzbrgityupsdnhlxawmjqofeck"sv; constexpr static std::string_view notch = "f"sv; };
-  struct VI    { constexpr static std::string_view value = "jpgvoumfyqbenhzrdkasxlictw"sv; };
-  struct VII   { constexpr static std::string_view value = "nzjhgrcxmyswboufaivlpekqdt"sv; };
-  struct VIII  { constexpr static std::string_view value = "fkqhtlxocbjspdzramewniuygv"sv; };
-  struct BETA  { constexpr static std::string_view value = "leyjvcnixwpbqmdrtakzgfuhos"sv; };
-  struct GAMMA { constexpr static std::string_view value = "fsokanuerhmbtiycwlqpzxvgjd"sv; };
+  struct I     { constexpr static std::string_view fvalue = "ekmflgdqvzntowyhxuspaibrcj"sv, rvalue = "uwygadfpvzbeckmthxslrinqoj"sv; };
+  struct II    { constexpr static std::string_view fvalue = "ajdksiruxblhwtmcqgznpyfvoe"sv, rvalue = "ajpczwrlfbdkotyuqgenhxmivs"sv, notch = "r"sv; };
+  struct III   { constexpr static std::string_view fvalue = "bdfhjlcprtxvznyeiwgakmusqo"sv, rvalue = "tagbpcsdqeufvnzhyixjwlrkom"sv, notch = "w"sv; };
+  struct IV    { constexpr static std::string_view fvalue = "esovpzjayquirhxlnftgkdcmwb"sv, rvalue = "hzwvartnlgupxqcejmbskdyoif"sv; };
+  struct V     { constexpr static std::string_view fvalue = "vzbrgityupsdnhlxawmjqofeck"sv, rvalue = "qcylxwenftzosmvjudkgiarphb"sv, notch = "f"sv; };
+  struct VI    { constexpr static std::string_view fvalue = "jpgvoumfyqbenhzrdkasxlictw"sv, rvalue = "skxqlhcnwarvgmebjptyfdzuio"sv; };
+  struct VII   { constexpr static std::string_view fvalue = "nzjhgrcxmyswboufaivlpekqdt"sv, rvalue = "qmgyvpedrcwtianuxfkzoslhjb"sv; };
+  struct VIII  { constexpr static std::string_view fvalue = "fkqhtlxocbjspdzramewniuygv"sv, rvalue = "qjinsaydvkbfruhmcplewztgxo"sv; };
+  struct BETA  { constexpr static std::string_view fvalue = "leyjvcnixwpbqmdrtakzgfuhos"sv, rvalue = "rlfobvuxhdsangykmpzqwejict"sv; };
+  struct GAMMA { constexpr static std::string_view fvalue = "fsokanuerhmbtiycwlqpzxvgjd"sv, rvalue = "elpzhaxjnydrkfctsibmgwqvou"sv; };
   // clang-format on
 } // namespace enmach::rotor_tags
 
@@ -31,15 +31,15 @@ namespace enmach
     [[nodiscard]] constexpr auto forward(char letter) const -> char
     {
       std::size_t tmp = (static_cast<std::size_t>(letter - 'a') + this->position_ + enmach::ETW.size() - this->ringstellung_) % enmach::ETW.size();
-      letter          = RotorTag::value.at(tmp);
+      letter          = RotorTag::fvalue.at(tmp);
       letter          = enmach::ETW.at((static_cast<std::size_t>(letter - 'a') + enmach::ETW.size() - this->position_ + this->ringstellung_) % enmach::ETW.size());
       return letter;
     }
 
     [[nodiscard]] constexpr auto inverse(char letter) const -> char
     {
-      letter = enmach::ETW.at((static_cast<std::size_t>(letter - 'a') + this->position_ + enmach::ETW.size() - this->ringstellung_) % enmach::ETW.size());
-      letter = enmach::ETW.at(RotorTag::value.find(letter));
+      std::size_t tmp = (static_cast<std::size_t>(letter - 'a') + this->position_ + enmach::ETW.size() - this->ringstellung_) % enmach::ETW.size();
+      letter = RotorTag::rvalue.at(tmp);
       letter = enmach::ETW.at((static_cast<std::size_t>(letter - 'a') + enmach::ETW.size() - this->position_ + this->ringstellung_) % enmach::ETW.size());
       return letter;
     }
