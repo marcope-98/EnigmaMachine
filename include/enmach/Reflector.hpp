@@ -22,7 +22,7 @@ namespace enmach
   template<class ReflectorTag>
   struct Reflector
   {
-    [[nodiscard]] constexpr auto reflect(char letter) const -> char { return ReflectorTag::value.at(static_cast<std::size_t>(letter - 'a')); }
+    [[nodiscard]] constexpr auto reflect(std::size_t index) const -> std::size_t { return static_cast<std::size_t>(ReflectorTag::value.at(index) - 'a'); }
   };
 } // namespace enmach
 
