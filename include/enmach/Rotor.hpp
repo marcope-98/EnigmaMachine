@@ -46,7 +46,7 @@ namespace enmach
     [[nodiscard]] constexpr auto forward(std::uint8_t index) const -> std::uint8_t
     {
       index = (index + this->position_ + enmach::ETW.size() - this->ringstellung_) % enmach::ETW.size();
-      index = RotorTag::fvalue.at(index);
+      index = RotorTag::fvalue[index];
       index = (index + enmach::ETW.size() - this->position_ + this->ringstellung_) % enmach::ETW.size();
       return index;
     }
@@ -54,7 +54,7 @@ namespace enmach
     [[nodiscard]] constexpr auto inverse(std::uint8_t index) const -> std::uint8_t
     {
       index = (index + this->position_ + enmach::ETW.size() - this->ringstellung_) % enmach::ETW.size();
-      index = RotorTag::rvalue.at(index);
+      index = RotorTag::rvalue[index];
       index = (index + enmach::ETW.size() - this->position_ + this->ringstellung_) % enmach::ETW.size();
       return index;
     }

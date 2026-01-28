@@ -21,7 +21,7 @@ namespace enmach
   template<class ReflectorTag>
   struct Reflector
   {
-    [[nodiscard]] constexpr auto reflect(std::uint8_t index) const -> std::uint8_t { return ReflectorTag::value.at(index); }
+    [[nodiscard]] constexpr auto reflect(std::uint8_t index) const -> std::uint8_t { return ReflectorTag::value[index]; }
   };
 } // namespace enmach
 
