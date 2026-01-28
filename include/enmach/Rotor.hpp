@@ -1,10 +1,9 @@
 #ifndef ENMACH_ROTOR_HPP_
 #define ENMACH_ROTOR_HPP_
 
+#include <array>
 #include <cstdint>
 #include <string_view>
-#include <array>
-
 
 #include "enmach/common.hpp"
 
@@ -44,7 +43,7 @@ namespace enmach
   struct Rotor
   {
   public:
-    [[nodiscard]] constexpr auto forward(std::size_t index) const -> std::size_t
+    [[nodiscard]] constexpr auto forward(std::uint8_t index) const -> std::uint8_t
     {
       index = (index + this->position_ + enmach::ETW.size() - this->ringstellung_) % enmach::ETW.size();
       index = RotorTag::fvalue.at(index);
@@ -52,7 +51,7 @@ namespace enmach
       return index;
     }
 
-    [[nodiscard]] constexpr auto inverse(std::size_t index) const -> std::size_t
+    [[nodiscard]] constexpr auto inverse(std::uint8_t index) const -> std::uint8_t
     {
       index = (index + this->position_ + enmach::ETW.size() - this->ringstellung_) % enmach::ETW.size();
       index = RotorTag::rvalue.at(index);
@@ -62,16 +61,16 @@ namespace enmach
 
     [[nodiscard]] constexpr auto increment(bool condition) -> bool
     {
-      this->position_ = (this->position_ + static_cast<std::size_t>(condition)) % enmach::ETW.size();
+      this->position_ = (this->position_ + static_cast<std::uint8_t>(condition)) % enmach::ETW.size();
       return condition && RotorTag::notch.find(ETW.at(this->position_)) != std::string_view::npos;
     }
 
-    constexpr auto setInitialPosition(char initial_position) -> void { this->position_ = static_cast<std::size_t>(initial_position - 'a'); }
-    constexpr auto setRingstellung(char ringstellung) -> void { this->ringstellung_ = static_cast<std::size_t>(ringstellung - 'a'); }
+    constexpr auto setInitialPosition(char initial_position) -> void { this->position_ = static_cast<std::uint8_t>(initial_position - 'a'); }
+    constexpr auto setRingstellung(char ringstellung) -> void { this->ringstellung_ = static_cast<std::uint8_t>(ringstellung - 'a'); }
 
   private:
-    std::size_t position_{};
-    std::size_t ringstellung_{};
+    std::uint8_t position_{};
+    std::uint8_t ringstellung_{};
   };
 } // namespace enmach
 #endif // ENMACH_ROTOR_HPP_
