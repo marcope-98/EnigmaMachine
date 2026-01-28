@@ -1,7 +1,10 @@
 #ifndef ENMACH_ROTOR_HPP_
 #define ENMACH_ROTOR_HPP_
 
+#include <cstdint>
 #include <string_view>
+#include <array>
+
 
 #include "enmach/common.hpp"
 
@@ -9,16 +12,29 @@ namespace enmach::rotor_tags
 {
   using namespace std::literals;
   // clang-format off
-  struct I     { constexpr static std::string_view fvalue = "ekmflgdqvzntowyhxuspaibrcj"sv, rvalue = "uwygadfpvzbeckmthxslrinqoj"sv; };
-  struct II    { constexpr static std::string_view fvalue = "ajdksiruxblhwtmcqgznpyfvoe"sv, rvalue = "ajpczwrlfbdkotyuqgenhxmivs"sv, notch = "r"sv; };
-  struct III   { constexpr static std::string_view fvalue = "bdfhjlcprtxvznyeiwgakmusqo"sv, rvalue = "tagbpcsdqeufvnzhyixjwlrkom"sv, notch = "w"sv; };
-  struct IV    { constexpr static std::string_view fvalue = "esovpzjayquirhxlnftgkdcmwb"sv, rvalue = "hzwvartnlgupxqcejmbskdyoif"sv; };
-  struct V     { constexpr static std::string_view fvalue = "vzbrgityupsdnhlxawmjqofeck"sv, rvalue = "qcylxwenftzosmvjudkgiarphb"sv, notch = "f"sv; };
-  struct VI    { constexpr static std::string_view fvalue = "jpgvoumfyqbenhzrdkasxlictw"sv, rvalue = "skxqlhcnwarvgmebjptyfdzuio"sv; };
-  struct VII   { constexpr static std::string_view fvalue = "nzjhgrcxmyswboufaivlpekqdt"sv, rvalue = "qmgyvpedrcwtianuxfkzoslhjb"sv; };
-  struct VIII  { constexpr static std::string_view fvalue = "fkqhtlxocbjspdzramewniuygv"sv, rvalue = "qjinsaydvkbfruhmcplewztgxo"sv; };
-  struct BETA  { constexpr static std::string_view fvalue = "leyjvcnixwpbqmdrtakzgfuhos"sv, rvalue = "rlfobvuxhdsangykmpzqwejict"sv; };
-  struct GAMMA { constexpr static std::string_view fvalue = "fsokanuerhmbtiycwlqpzxvgjd"sv, rvalue = "elpzhaxjnydrkfctsibmgwqvou"sv; };
+  struct I     { constexpr static std::array<std::uint8_t, 27> fvalue = { "\x04\x0a\x0c\x05\x0b\x06\x03\x10\x15\x19\x0d\x13\x0e\x16\x18\x07\x17\x14\x12\x0f\x00\x08\x01\x11\x02\x09" }, 
+                                                               rvalue = { "\x14\x16\x18\x06\x00\x03\x05\x0f\x15\x19\x01\x04\x02\x0a\x0c\x13\x07\x17\x12\x0b\x11\x08\x0d\x10\x0e\x09" }; };
+  struct II    { constexpr static std::array<std::uint8_t, 27> fvalue = { "\x00\x09\x03\x0a\x12\x08\x11\x14\x17\x01\x0b\x07\x16\x13\x0c\x02\x10\x06\x19\x0d\x0f\x18\x05\x15\x0e\x04" }, 
+                                                               rvalue = { "\x00\x09\x0f\x02\x19\x16\x11\x0b\x05\x01\x03\x0a\x0e\x13\x18\x14\x10\x06\x04\x0d\x07\x17\x0c\x08\x15\x12" }; 
+                 constexpr static std::string_view notch    = "r"sv; };
+  struct III   { constexpr static std::array<std::uint8_t, 27> fvalue = { "\x01\x03\x05\x07\x09\x0b\x02\x0f\x11\x13\x17\x15\x19\x0d\x18\x04\x08\x16\x06\x00\x0a\x0c\x14\x12\x10\x0e" }, 
+                                                               rvalue = { "\x13\x00\x06\x01\x0f\x02\x12\x03\x10\x04\x14\x05\x15\x0d\x19\x07\x18\x08\x17\x09\x16\x0b\x11\x0a\x0e\x0c" }; 
+                 constexpr static std::string_view notch    = "w"sv; };
+  struct IV    { constexpr static std::array<std::uint8_t, 27> fvalue = { "\x04\x12\x0e\x15\x0f\x19\x09\x00\x18\x10\x14\x08\x11\x07\x17\x0b\x0d\x05\x13\x06\x0a\x03\x02\x0c\x16\x01" }, 
+                                                               rvalue = { "\x07\x19\x16\x15\x00\x11\x13\x0d\x0b\x06\x14\x0f\x17\x10\x02\x04\x09\x0c\x01\x12\x0a\x03\x18\x0e\x08\x05" }; };
+  struct V     { constexpr static std::array<std::uint8_t, 27> fvalue = { "\x15\x19\x01\x11\x06\x08\x13\x18\x14\x0f\x12\x03\x0d\x07\x0b\x17\x00\x16\x0c\x09\x10\x0e\x05\x04\x02\x0a" }, 
+                                                               rvalue = { "\x10\x02\x18\x0b\x17\x16\x04\x0d\x05\x13\x19\x0e\x12\x0c\x15\x09\x14\x03\x0a\x06\x08\x00\x11\x0f\x07\x01" }; 
+                 constexpr static std::string_view notch    = "f"sv; };
+  struct VI    { constexpr static std::array<std::uint8_t, 27> fvalue = { "\x09\x0f\x06\x15\x0e\x14\x0c\x05\x18\x10\x01\x04\x0d\x07\x19\x11\x03\x0a\x00\x12\x17\x0b\x08\x02\x13\x16" }, 
+                                                               rvalue = { "\x12\x0a\x17\x10\x0b\x07\x02\x0d\x16\x00\x11\x15\x06\x0c\x04\x01\x09\x0f\x13\x18\x05\x03\x19\x14\x08\x0e" }; };
+  struct VII   { constexpr static std::array<std::uint8_t, 27> fvalue = { "\x0d\x19\x09\x07\x06\x11\x02\x17\x0c\x18\x12\x16\x01\x0e\x14\x05\x00\x08\x15\x0b\x0f\x04\x0a\x10\x03\x13" }, 
+                                                               rvalue = { "\x10\x0c\x06\x18\x15\x0f\x04\x03\x11\x02\x16\x13\x08\x00\x0d\x14\x17\x05\x0a\x19\x0e\x12\x0b\x07\x09\x01" }; };
+  struct VIII  { constexpr static std::array<std::uint8_t, 27> fvalue = { "\x05\x0a\x10\x07\x13\x0b\x17\x0e\x02\x01\x09\x12\x0f\x03\x19\x11\x00\x0c\x04\x16\x0d\x08\x14\x18\x06\x15" }, 
+                                                               rvalue = { "\x10\x09\x08\x0d\x12\x00\x18\x03\x15\x0a\x01\x05\x11\x14\x07\x0c\x02\x0f\x0b\x04\x16\x19\x13\x06\x17\x0e" }; };
+  struct BETA  { constexpr static std::array<std::uint8_t, 27> fvalue = { "\x0b\x04\x18\x09\x15\x02\x0d\x08\x17\x16\x0f\x01\x10\x0c\x03\x11\x13\x00\x0a\x19\x06\x05\x14\x07\x0e\x12" }, 
+                                                               rvalue = { "\x11\x0b\x05\x0e\x01\x15\x14\x17\x07\x03\x12\x00\x0d\x06\x18\x0a\x0c\x0f\x19\x10\x16\x04\x09\x08\x02\x13" }; };
+  struct GAMMA { constexpr static std::array<std::uint8_t, 27> fvalue = { "\x05\x12\x0e\x0a\x00\x0d\x14\x04\x11\x07\x0c\x01\x13\x08\x18\x02\x16\x0b\x10\x0f\x19\x17\x15\x06\x09\x03" }, 
+                                                               rvalue = { "\x04\x0b\x0f\x19\x07\x00\x17\x09\x0d\x18\x03\x11\x0a\x05\x02\x13\x12\x08\x01\x0c\x06\x16\x10\x15\x0e\x14" }; };
   // clang-format on
 } // namespace enmach::rotor_tags
 
@@ -31,7 +47,7 @@ namespace enmach
     [[nodiscard]] constexpr auto forward(std::size_t index) const -> std::size_t
     {
       index = (index + this->position_ + enmach::ETW.size() - this->ringstellung_) % enmach::ETW.size();
-      index = static_cast<std::size_t>(RotorTag::fvalue.at(index) - 'a');
+      index = RotorTag::fvalue.at(index);
       index = (index + enmach::ETW.size() - this->position_ + this->ringstellung_) % enmach::ETW.size();
       return index;
     }
@@ -39,7 +55,7 @@ namespace enmach
     [[nodiscard]] constexpr auto inverse(std::size_t index) const -> std::size_t
     {
       index = (index + this->position_ + enmach::ETW.size() - this->ringstellung_) % enmach::ETW.size();
-      index = static_cast<std::size_t>(RotorTag::rvalue.at(index) - 'a');
+      index = RotorTag::rvalue.at(index);
       index = (index + enmach::ETW.size() - this->position_ + this->ringstellung_) % enmach::ETW.size();
       return index;
     }
