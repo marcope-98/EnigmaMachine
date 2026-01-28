@@ -37,10 +37,10 @@ namespace enmach::rotor_tags
                  constexpr static auto turn(std::uint8_t position) -> bool { return position ==  0U || position == 10U; }                                                               };
   struct BETA  { constexpr static std::array<std::uint8_t, 27> fvalue = { "\x0b\x04\x18\x09\x15\x02\x0d\x08\x17\x16\x0f\x01\x10\x0c\x03\x11\x13\x00\x0a\x19\x06\x05\x14\x07\x0e\x12" }, 
                                                                rvalue = { "\x11\x0b\x05\x0e\x01\x15\x14\x17\x07\x03\x12\x00\x0d\x06\x18\x0a\x0c\x0f\x19\x10\x16\x04\x09\x08\x02\x13" }; 
-                 constexpr static auto turn(std::uint8_t position) -> bool { return false; }                                                                                            };
+                 constexpr static auto turn(std::uint8_t position) -> bool { (void)position; return false; }                                                                            };
   struct GAMMA { constexpr static std::array<std::uint8_t, 27> fvalue = { "\x05\x12\x0e\x0a\x00\x0d\x14\x04\x11\x07\x0c\x01\x13\x08\x18\x02\x16\x0b\x10\x0f\x19\x17\x15\x06\x09\x03" }, 
                                                                rvalue = { "\x04\x0b\x0f\x19\x07\x00\x17\x09\x0d\x18\x03\x11\x0a\x05\x02\x13\x12\x08\x01\x0c\x06\x16\x10\x15\x0e\x14" }; 
-                 constexpr static auto turn(std::uint8_t position) -> bool { return false; }                                                                                            };
+                 constexpr static auto turn(std::uint8_t position) -> bool { (void)position; return false; }                                                                            };
   // clang-format on
 } // namespace enmach::rotor_tags
 
