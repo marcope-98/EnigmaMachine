@@ -50,7 +50,7 @@ namespace enmach
 
     [[nodiscard]] constexpr auto exec(char letter) -> char
     {
-      letter = this->plugboard(letter);
+      letter             = this->plugboard(letter);
       std::uint8_t index = static_cast<std::uint8_t>(letter - 'a');
       std::apply([&index](auto &&...args)
                  { ((index = args.forward(index)), ...); }, this->rotors);
