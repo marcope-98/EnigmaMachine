@@ -3,14 +3,11 @@
 
 #include <array>
 #include <cstdint>
-#include <iostream>
-
 
 #include "enmach/common.hpp"
 
 namespace enmach::rotor_tags
 {
-  using namespace std::literals;
   // clang-format off
   struct I     { constexpr static std::array<std::uint8_t, 27> fvalue = { "\x04\x0a\x0c\x05\x0b\x06\x03\x10\x15\x19\x0d\x13\x0e\x16\x18\x07\x17\x14\x12\x0f\x00\x08\x01\x11\x02\x09" }, 
                                                                rvalue = { "\x14\x16\x18\x06\x00\x03\x05\x0f\x15\x19\x01\x04\x02\x0a\x0c\x13\x07\x17\x12\x0b\x11\x08\x0d\x10\x0e\x09" }; 
@@ -84,7 +81,7 @@ namespace enmach
         this->position_ = static_cast<std::uint8_t>(initial_position);
       this->setInternalDifference();
     }
-    
+
     template<class T>
     constexpr auto setRingstellung(T ringstellung) -> void
     {
