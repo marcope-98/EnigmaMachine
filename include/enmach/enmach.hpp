@@ -19,6 +19,14 @@ namespace enmach
           3>,
       Args...>;
 
+  template<class... Args>
+  using EnigmaM4 = EnigmaMachine<
+      EnigmaMachineConfiguration<
+          Set<I, II, III, IV, V, VI, VII, VIII, BETA, GAMMA>,
+          Set<UKW_b, UKW_c>,
+          4>,
+      Args...>;
+
 } // namespace enmach
 
 #endif // ENMACH_ENMACH_HPP_
