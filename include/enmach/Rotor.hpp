@@ -2,8 +2,9 @@
 #define ENMACH_ROTOR_HPP_
 
 #include <array>
-#include <iostream>
 #include <cstdint>
+#include <iostream>
+
 
 #include "enmach/common.hpp"
 
@@ -74,14 +75,23 @@ namespace enmach
       return result;
     }
 
-    constexpr auto setInitialPosition(char initial_position) -> void
+    template<class T>
+    constexpr auto setInitialPosition(T initial_position) -> void
     {
-      this->position_ = static_cast<std::uint8_t>(initial_position - 'a');
+      if constexpr (std::is_same_v<T, char>)
+        this->position_ = static_cast<std::uint8_t>(initial_position - 'a');
+      else
+        this->position_ = static_cast<std::uint8_t>(initial_position);
       this->setInternalDifference();
     }
-    constexpr auto setRingstellung(char ringstellung) -> void
+    
+    template<class T>
+    constexpr auto setRingstellung(T ringstellung) -> void
     {
-      this->ringstellung_ = static_cast<std::uint8_t>(ringstellung - 'a');
+      if constexpr (std::is_same_v<T, char>)
+        this->ringstellung_ = static_cast<std::uint8_t>(ringstellung - 'a');
+      else
+        this->ringstellung_ = static_cast<std::uint8_t>(ringstellung);
       this->setInternalDifference();
     }
 
