@@ -68,7 +68,8 @@ namespace enmach
 
     [[nodiscard]] constexpr auto increment(bool condition) -> bool
     {
-      this->internal_difference = (this->internal_difference + static_cast<std::uint8_t>(condition)) % enmach::ETW.size();
+      if constexpr (!std::is_same_v<RotorTag, enmach::rotor_tags::GAMMA> && !std::is_same_v<RotorTag, enmach::rotor_tags::BETA>)
+        this->internal_difference = (this->internal_difference + static_cast<std::uint8_t>(condition)) % enmach::ETW.size();
       return condition && RotorTag::turn((this->internal_difference + this->ringstellung_) % ETW.size());
     }
 
