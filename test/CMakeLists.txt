@@ -16,4 +16,4 @@ add_executable(enigma_machine_tests
   ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp
 )
 
-target_link_libraries(enigma_machine_tests gtest)
+target_link_libraries(enigma_machine_tests gtest enmach::enmach)
