@@ -85,7 +85,7 @@ namespace enmach
     }
 
   private:
-    constexpr auto setInternalDifference() -> void { this->internal_difference = this->position_ + enmach::ETW.size() - this->ringstellung_; }
+    constexpr auto setInternalDifference() -> void { this->internal_difference = (this->position_ + enmach::ETW.size() - this->ringstellung_) % enmach::ETW.size(); }
 
     std::uint8_t position_{};
     std::uint8_t ringstellung_{};
