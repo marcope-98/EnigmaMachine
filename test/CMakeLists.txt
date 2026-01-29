@@ -10,3 +10,10 @@ FetchContent_Declare(
 set(BUILD_GMOCK   OFF CACHE INTERNAL "")
 set(INSTALL_GTEST OFF CACHE INTERNAL "")
 FetchContent_MakeAvailable(googletest)
+
+add_executable(enigma_machine_tests
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/enigma_m4_test.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp
+)
+
+target_link_libraries(enigma_machine_tests gtest)
