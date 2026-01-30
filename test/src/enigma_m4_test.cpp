@@ -8,27 +8,30 @@ using namespace enmach::reflector_tags;
 using namespace enmach::rotor_tags;
 using namespace std::literals;
 
-template<class PlugboardValue>
-struct Plugboard : public PlugboardValue
+namespace
 {
-  constexpr auto operator()(char letter) const -> char { return PlugboardValue::value.at(static_cast<std::size_t>(letter - 'a')); }
-};
-
-template<class EM>
-auto decrypt(EM& em, const std::string_view& input) -> std::string
-{
-  std::string                output;
-  output.reserve(input.size());
-  for (const auto &character : input)
+  template<class PlugboardValue>
+  struct Plugboard : public PlugboardValue
   {
-    em.increment();
-    if (character == '.')
-      output += '.';
-    else
-      output += em.exec(character);;
+    constexpr auto operator()(char letter) const -> char { return PlugboardValue::value.at(static_cast<std::size_t>(letter - 'a')); }
+  };
+
+  template<class EM>
+  auto decrypt(EM &em, const std::string_view &input) -> std::string
+  {
+    std::string output;
+    output.reserve(input.size());
+    for (const auto &character : input)
+    {
+      em.increment();
+      if (character == '.')
+        output += '.';
+      else
+        output += em.exec(character);
+    }
+    return output;
   }
-  return output;
-}
+} // namespace
 
 TEST(EnigmaM4Tests, P1030659)
 {
