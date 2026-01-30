@@ -12,7 +12,7 @@ namespace enmach
   using namespace enmach::reflector_tags;
 
   template<class... Args>
-  using Enigma1 = EnigmaMachine<
+  using EnigmaM1 = EnigmaMachine<
       EnigmaMachineConfiguration<
           Set<I, II, III, IV, V>,
           Set<UKW_A, UKW_B, UKW_C>,
