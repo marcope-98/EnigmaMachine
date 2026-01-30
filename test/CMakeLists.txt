@@ -13,6 +13,7 @@ FetchContent_MakeAvailable(googletest)
 
 add_executable(enigma_machine_tests
   ${CMAKE_CURRENT_SOURCE_DIR}/src/enigma_m1_test.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/enigma_m3_test.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/enigma_m4_test.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp
 )
