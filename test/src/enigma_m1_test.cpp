@@ -4,7 +4,7 @@
 
 #include "enmach/enmach.hpp"
 
-using namespace enmach::reflector_tags;
+using namespace enmach;
 using namespace enmach::rotor_tags;
 using namespace std::literals;
 
@@ -38,7 +38,7 @@ TEST(EnigmaM1Tests, no_plugboard_default_settings_same_letter)
   // clang-format off
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
-  enmach::EnigmaM1<Plugboard<PlugboardValue>, UKW_B, I, II, III> m1;
+  enmach::EnigmaM1<Plugboard<PlugboardValue>, ukw::B, I, II, III> m1;
   m1.setInitialRotorPosition('a', 'a', 'a');
   m1.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "aaaaa"sv;
@@ -52,7 +52,7 @@ TEST(EnigmaM1Tests, no_plugboard_default_settings_same_letter_decipher)
   // clang-format off
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
-  enmach::EnigmaM1<Plugboard<PlugboardValue>, UKW_B, I, II, III> m1;
+  enmach::EnigmaM1<Plugboard<PlugboardValue>, ukw::B, I, II, III> m1;
   m1.setInitialRotorPosition('a', 'a', 'a');
   m1.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "bdzgo"sv;
@@ -66,7 +66,7 @@ TEST(EnigmaM1Tests, all_settings_configured)
   // clang-format off
   struct PlugboardValue{ std::string_view value = "jbcdmrutyaklenopqfshgvwxiz"sv; };
   // clang-format on
-  enmach::EnigmaM1<Plugboard<PlugboardValue>, UKW_B, III, IV, I> m1;
+  enmach::EnigmaM1<Plugboard<PlugboardValue>, ukw::B, III, IV, I> m1;
   m1.setInitialRotorPosition('f', 'r', 'h');
   m1.setRingstellung('l', 'e', 't');
   constexpr std::string_view input    = "helloworld"sv;
@@ -80,7 +80,7 @@ TEST(EnigmaM1Tests, middle_rotor_step)
   // clang-format off
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
-  enmach::EnigmaM1<Plugboard<PlugboardValue>, UKW_B, I, II, III> m1;
+  enmach::EnigmaM1<Plugboard<PlugboardValue>, ukw::B, I, II, III> m1;
   m1.setInitialRotorPosition('a', 'a', 'u');
   m1.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "aaa"sv;
@@ -94,7 +94,7 @@ TEST(EnigmaM1Tests, double_rotor_step)
   // clang-format off
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
-  enmach::EnigmaM1<Plugboard<PlugboardValue>, UKW_B, I, II, III> m1;
+  enmach::EnigmaM1<Plugboard<PlugboardValue>, ukw::B, I, II, III> m1;
   m1.setInitialRotorPosition('b', 'd', 'u');
   m1.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "aaa"sv;
@@ -108,7 +108,7 @@ TEST(EnigmaM1Tests, long_string)
   // clang-format off
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
-  enmach::EnigmaM1<Plugboard<PlugboardValue>, UKW_B, I, II, III> m1;
+  enmach::EnigmaM1<Plugboard<PlugboardValue>, ukw::B, I, II, III> m1;
   m1.setInitialRotorPosition('a', 'a', 'a');
   m1.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"sv;
@@ -122,7 +122,7 @@ TEST(EnigmaM1Tests, even_longer_string)
   // clang-format off
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
-  enmach::EnigmaM1<Plugboard<PlugboardValue>, UKW_B, I, II, III> m1;
+  enmach::EnigmaM1<Plugboard<PlugboardValue>, ukw::B, I, II, III> m1;
   m1.setInitialRotorPosition('a', 'a', 'a');
   m1.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"sv;

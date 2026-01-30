@@ -9,13 +9,12 @@
 namespace enmach
 {
   using namespace enmach::rotor_tags;
-  using namespace enmach::reflector_tags;
 
   template<class... Args>
   using EnigmaM1 = EnigmaMachine<
       EnigmaMachineConfiguration<
           Set<I, II, III, IV, V>,
-          Set<UKW_A, UKW_B, UKW_C>,
+          Set<ukw::A, ukw::B, ukw::C>,
           3>,
       Args...>;
 
@@ -23,7 +22,7 @@ namespace enmach
   using EnigmaM3 = EnigmaMachine<
       EnigmaMachineConfiguration<
           Set<I, II, III, IV, V, VI, VII, VIII>,
-          Set<UKW_A, UKW_B, UKW_C>,
+          Set<ukw::A, ukw::B, ukw::C>,
           3>,
       Args...>;
 
@@ -34,7 +33,7 @@ namespace enmach
       EnigmaMachine<
           EnigmaMachineConfiguration<
               Set<I, II, III, IV, V, VI, VII, VIII, BETA, GAMMA>,
-              Set<UKW_b, UKW_c>,
+              Set<ukw::b, ukw::c>,
               4>,
           Plugboard, Reflector, Zusatzwalze, Rotors...>>;
 } // namespace enmach

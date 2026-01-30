@@ -4,7 +4,7 @@
 
 #include "enmach/enmach.hpp"
 
-using namespace enmach::reflector_tags;
+using namespace enmach;
 using namespace enmach::rotor_tags;
 using namespace std::literals;
 
@@ -38,7 +38,7 @@ TEST(EnigmaM3Tests, I_II_III_UKWB_noPlugboard_encrypt)
   // clang-format off
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
-  enmach::EnigmaM3<Plugboard<PlugboardValue>, UKW_B, I, II, III> m3;
+  enmach::EnigmaM3<Plugboard<PlugboardValue>, ukw::B, I, II, III> m3;
   m3.setInitialRotorPosition('a', 'a', 'a');
   m3.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "nvkzhgdhmangsvksyiznoxqgknszoxbuiwoqueocihvvklgkgaemkxlpwlvg"sv;
@@ -52,7 +52,7 @@ TEST(EnigmaM3Tests, I_II_III_UKWB_noPlugboard_decrypt)
   // clang-format off
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
-  enmach::EnigmaM3<Plugboard<PlugboardValue>, UKW_B, I, II, III> m3;
+  enmach::EnigmaM3<Plugboard<PlugboardValue>, ukw::B, I, II, III> m3;
   m3.setInitialRotorPosition('a', 'a', 'a');
   m3.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "yumjmzfvotepjpqditfzltartgrujaxlwlbdfqdxdluynqrmioznrebwtgqs"sv;
@@ -66,7 +66,7 @@ TEST(EnigmaM3Tests, ring_settings_encrypt)
   // clang-format off
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
-  enmach::EnigmaM3<Plugboard<PlugboardValue>, UKW_B, I, II, III> m3;
+  enmach::EnigmaM3<Plugboard<PlugboardValue>, ukw::B, I, II, III> m3;
   m3.setInitialRotorPosition('a', 'a', 'a');
   m3.setRingstellung('h', 'l', 'k');
   constexpr std::string_view input    = "nvkzhgdhmangsvksyiznoxqgknszoxbuiwoqueocihvvklgkgaemkxlpwlvg"sv;
@@ -80,7 +80,7 @@ TEST(EnigmaM3Tests, ring_settings_decrypt)
   // clang-format off
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
-  enmach::EnigmaM3<Plugboard<PlugboardValue>, UKW_B, I, II, III> m3;
+  enmach::EnigmaM3<Plugboard<PlugboardValue>, ukw::B, I, II, III> m3;
   m3.setInitialRotorPosition('a', 'a', 'a');
   m3.setRingstellung('h', 'l', 'k');
   constexpr std::string_view input    = "ytwhpkbalvphboikmyhuhzfulmueyuipzmsczlhvpbbofpuyfivqblohtiuu"sv;
@@ -94,7 +94,7 @@ TEST(EnigmaM3Tests, rotor_settings_encrypt)
   // clang-format off
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
-  enmach::EnigmaM3<Plugboard<PlugboardValue>, UKW_B, I, II, III> m3;
+  enmach::EnigmaM3<Plugboard<PlugboardValue>, ukw::B, I, II, III> m3;
   m3.setInitialRotorPosition('h', 'l', 'k');
   m3.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "nvkzhgdhmangsvksyiznoxqgknszoxbuiwoqueocihvvklgkgaemkxlpwlvg"sv;
@@ -108,7 +108,7 @@ TEST(EnigmaM3Tests, rotor_settings_decrypt)
   // clang-format off
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
-  enmach::EnigmaM3<Plugboard<PlugboardValue>, UKW_B, I, II, III> m3;
+  enmach::EnigmaM3<Plugboard<PlugboardValue>, ukw::B, I, II, III> m3;
   m3.setInitialRotorPosition('h', 'l', 'k');
   m3.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "gzbseaxdrvmddsqinjkjjqkkyiydsjfgymhcsvcupluyfakbymyezdyyuxfm"sv;
@@ -122,7 +122,7 @@ TEST(EnigmaM3Tests, plugboard_encrypt)
   // clang-format off
   struct PlugboardValue{ std::string_view value = "zbcdrwghuylkmnopqestivfxja"sv; };
   // clang-format on
-  enmach::EnigmaM3<Plugboard<PlugboardValue>, UKW_B, I, II, III> m3;
+  enmach::EnigmaM3<Plugboard<PlugboardValue>, ukw::B, I, II, III> m3;
   m3.setInitialRotorPosition('a', 'a', 'a');
   m3.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "nvkzhgdhmangsvksyiznoxqgknszoxbuiwoqueocihvvklgkgaemkxlpwlvg"sv;
@@ -136,7 +136,7 @@ TEST(EnigmaM3Tests, plugboard_decrypt)
   // clang-format off
   struct PlugboardValue{ std::string_view value = "zbcdrwghuylkmnopqestivfxja"sv; };
   // clang-format on
-  enmach::EnigmaM3<Plugboard<PlugboardValue>, UKW_B, I, II, III> m3;
+  enmach::EnigmaM3<Plugboard<PlugboardValue>, ukw::B, I, II, III> m3;
   m3.setInitialRotorPosition('a', 'a', 'a');
   m3.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "jibgmawvodrpypvdggpaktzeggehyzxxmvbdzidxvkijgveaudznirwfnhqs"sv;
@@ -150,7 +150,7 @@ TEST(EnigmaM3Tests, reflector_encrypt)
   // clang-format off
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
-  enmach::EnigmaM3<Plugboard<PlugboardValue>, UKW_C, I, II, III> m3;
+  enmach::EnigmaM3<Plugboard<PlugboardValue>, ukw::C, I, II, III> m3;
   m3.setInitialRotorPosition('a', 'a', 'a');
   m3.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "nvkzhgdhmangsvksyiznoxqgknszoxbuiwoqueocihvvklgkgaemkxlpwlvg"sv;
@@ -164,7 +164,7 @@ TEST(EnigmaM3Tests, reflector_decrypt)
   // clang-format off
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
-  enmach::EnigmaM3<Plugboard<PlugboardValue>, UKW_C, I, II, III> m3;
+  enmach::EnigmaM3<Plugboard<PlugboardValue>, ukw::C, I, II, III> m3;
   m3.setInitialRotorPosition('a', 'a', 'a');
   m3.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "zgwgwykjxsziqfjrebgjmikuopebuvukrfjomipslppeuzxilwaieuxjomzi"sv;
@@ -178,7 +178,7 @@ TEST(EnigmaM3Tests, rotors_encrypt)
   // clang-format off
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
-  enmach::EnigmaM3<Plugboard<PlugboardValue>, UKW_B, VI, III, VIII> m3;
+  enmach::EnigmaM3<Plugboard<PlugboardValue>, ukw::B, VI, III, VIII> m3;
   m3.setInitialRotorPosition('a', 'a', 'a');
   m3.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "nvkzhgdhmangsvksyiznoxqgknszoxbuiwoqueocihvvklgkgaemkxlpwlvg"sv;
@@ -192,7 +192,7 @@ TEST(EnigmaM3Tests, rotors_decrypt)
   // clang-format off
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
-  enmach::EnigmaM3<Plugboard<PlugboardValue>, UKW_B, VI, III, VIII> m3;
+  enmach::EnigmaM3<Plugboard<PlugboardValue>, ukw::B, VI, III, VIII> m3;
   m3.setInitialRotorPosition('a', 'a', 'a');
   m3.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "gxtqyeixxntxjmbbmsvadvywrfxkxcjfoxlczwysuvgxibcxsskxgqkrlxur"sv;
@@ -206,7 +206,7 @@ TEST(EnigmaM3Tests, all_together_encrypt)
   // clang-format off
   struct PlugboardValue{ std::string_view value = "zbcdrwghuylkmnopqestivfxja"sv; };
   // clang-format on
-  enmach::EnigmaM3<Plugboard<PlugboardValue>, UKW_C, VI, III, VIII> m3;
+  enmach::EnigmaM3<Plugboard<PlugboardValue>, ukw::C, VI, III, VIII> m3;
   m3.setInitialRotorPosition('h', 'l', 'k');
   m3.setRingstellung('h', 'l', 'k');
   constexpr std::string_view input    = "nvkzhgdhmangsvksyiznoxqgknszoxbuiwoqueocihvvklgkgaemkxlpwlvg"sv;
@@ -221,7 +221,7 @@ TEST(EnigmaM3Tests, all_together_decrypt)
   // clang-format off
   struct PlugboardValue{ std::string_view value = "zbcdrwghuylkmnopqestivfxja"sv; };
   // clang-format on
-  enmach::EnigmaM3<Plugboard<PlugboardValue>, UKW_C, VI, III, VIII> m3;
+  enmach::EnigmaM3<Plugboard<PlugboardValue>, ukw::C, VI, III, VIII> m3;
   m3.setInitialRotorPosition('h', 'l', 'k');
   m3.setRingstellung('h', 'l', 'k');
   constexpr std::string_view input    = "vinnjluztqxkpqlthluanqvljpankrdljtvhevnrkidyvschxisntajnacmo"sv;
