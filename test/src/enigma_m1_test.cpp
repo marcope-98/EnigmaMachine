@@ -39,7 +39,7 @@ TEST(EnigmaM1Tests, no_plugboard_default_settings_same_letter)
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
   enmach::EnigmaM1<Plugboard<PlugboardValue>, ukw::B, I, II, III> m1;
-  m1.setInitialRotorPosition('a', 'a', 'a');
+  m1.setGrundstellungs('a', 'a', 'a');
   m1.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "aaaaa"sv;
   constexpr std::string_view expected = "bdzgo"sv;
@@ -53,7 +53,7 @@ TEST(EnigmaM1Tests, no_plugboard_default_settings_same_letter_decipher)
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
   enmach::EnigmaM1<Plugboard<PlugboardValue>, ukw::B, I, II, III> m1;
-  m1.setInitialRotorPosition('a', 'a', 'a');
+  m1.setGrundstellungs('a', 'a', 'a');
   m1.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "bdzgo"sv;
   constexpr std::string_view expected = "aaaaa"sv;
@@ -67,7 +67,7 @@ TEST(EnigmaM1Tests, all_settings_configured)
   struct PlugboardValue{ std::string_view value = "jbcdmrutyaklenopqfshgvwxiz"sv; };
   // clang-format on
   enmach::EnigmaM1<Plugboard<PlugboardValue>, ukw::B, III, IV, I> m1;
-  m1.setInitialRotorPosition('f', 'r', 'h');
+  m1.setGrundstellungs('f', 'r', 'h');
   m1.setRingstellung('l', 'e', 't');
   constexpr std::string_view input    = "helloworld"sv;
   constexpr std::string_view expected = "zzaskxukih"sv;
@@ -81,7 +81,7 @@ TEST(EnigmaM1Tests, middle_rotor_step)
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
   enmach::EnigmaM1<Plugboard<PlugboardValue>, ukw::B, I, II, III> m1;
-  m1.setInitialRotorPosition('a', 'a', 'u');
+  m1.setGrundstellungs('a', 'a', 'u');
   m1.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "aaa"sv;
   constexpr std::string_view expected = "muq"sv;
@@ -95,7 +95,7 @@ TEST(EnigmaM1Tests, double_rotor_step)
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
   enmach::EnigmaM1<Plugboard<PlugboardValue>, ukw::B, I, II, III> m1;
-  m1.setInitialRotorPosition('b', 'd', 'u');
+  m1.setGrundstellungs('b', 'd', 'u');
   m1.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "aaa"sv;
   constexpr std::string_view expected = "wrl"sv;
@@ -109,7 +109,7 @@ TEST(EnigmaM1Tests, long_string)
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
   enmach::EnigmaM1<Plugboard<PlugboardValue>, ukw::B, I, II, III> m1;
-  m1.setInitialRotorPosition('a', 'a', 'a');
+  m1.setGrundstellungs('a', 'a', 'a');
   m1.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"sv;
   constexpr std::string_view expected = "bdzgowcxltksbtmcdlpbmuqofxyhcxtgyjflinhnxshiuntheorxpqpkovhcbubtzszsoostgotfsodbbzzlxlcyzxifgwfdzeeqibmgfjbwzfckpfmgbxqcivibbrncocjuvydkmvjpfmdrmtglwfozlxgjeyyqpvpbwnckvklztcbdldctsnrcoovptgbvbbisgjsoyhdenctnuukcughrevwbdjctq"sv;
@@ -123,7 +123,7 @@ TEST(EnigmaM1Tests, even_longer_string)
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
   enmach::EnigmaM1<Plugboard<PlugboardValue>, ukw::B, I, II, III> m1;
-  m1.setInitialRotorPosition('a', 'a', 'a');
+  m1.setGrundstellungs('a', 'a', 'a');
   m1.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"sv;
   constexpr std::string_view expected = "bdzgowcxltksbtmcdlpbmuqofxyhcxtgyjflinhnxshiuntheorxpqpkovhcbubtzszsoostgotfsodbbzzlxlcyzxifgwfdzeeqibmgfjbwzfckpfmgbxqcivibbrncocjuvydkmvjpfmdrmtglwfozlxgjeyyqpvpbwnckvklztcbdldctsnrcoovptgbvbbisgjsoyhdenctnuukcughrevwbdjctqxxoglebzmdbrzosxdtzszbgdcfprbzyqgsncchgyewohvjbyzgkdgynneujiwctycytuumboyvunnqukksobscorsuoscnvroqlheudsukymigibsxpihntuvgghifqtgzxlgyqcnvnsrclvpyosvrbkcexrnlgdywebfxivkktugkpvmzotuogmhhzdrekjhlefkkpoxlwbwvbyukdtquhdqtrevrqjmqwndovwljhccxcfxrppxmsjezcjuftbrzzmcssnjnylcgloycitvyqxpdiyfgefyvxsxhkegxkmmdswbcyrkizocgmfddtmwztlssfljmooluuqjmijsciqvruistltgnclgkiktzhrxenrxjhyztlxicwwmywxdyiblerbflwjqywongiqqcuuqtpphbiehtuvgcegpeymwicgkwjcufkluidmjdivpjdmpgqpwitkgviboomtnduhqphgsqrjrnoovpwmdnxllvfiimkieyizmquwydpoultuwbukvmmwrlqlqsqpeugjrcxzwpfyiyybwloewrouvkpoztceuwtfjzqwpbqldttsrmdflgxbxzryqkdgjrzezmkhjnqypdjwcjfjlfntrsncnlgssg"sv;

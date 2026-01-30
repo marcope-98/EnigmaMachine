@@ -39,7 +39,7 @@ TEST(EnigmaM4Tests, P1030659)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('y', 'v', 'o', 's');
+  m4.setGrundstellungs('y', 'v', 'o', 's');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "yupovejtbkonnfsaltwelqazjxtirjlliscsgxshejfynzqdnqsuxpgftjkwingorybjyadwnfclppnslwuybuqisxgq"sv;
   constexpr std::string_view expected = "fffddduuuausbildungvonvonzwosechsuuuflottxxtttfffzwodreiausgezqestetmitssssssgcgxtttfffzwoqi"sv;
@@ -53,7 +53,7 @@ TEST(EnigmaM4Tests, P1030660)
   struct PlugboardValue{ std::string_view value = "efmqabguinkxcjordpzthwvlys"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::c, BETA, V, VI, VIII> m4;
-  m4.setInitialRotorPosition('i', 'g', 'z', 'q');
+  m4.setGrundstellungs('i', 'g', 'z', 'q');
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "twnhyazgbilshewpglbpqlwqekitiafgzhwimcwdfxpafeilqzwfnrfttqhuoadvlrlgaoqkvlwlsjhwofjjsluveynrrajaqdkqbgmfycevkpfjpkowhhqzyzeqrtqikkxixtfpoemi"sv;
   constexpr std::string_view expected = "fxdxuuuostyfuncquuufxwttxvvvuuueinseinsnuldreikkeiselekkxxistsechsstuendlichesdockenvormittagsamdreixfunfxinrendsburggemxfxdxuuuostmoeglichl"sv;
@@ -67,7 +67,7 @@ TEST(EnigmaM4Tests, P1030661)
   struct PlugboardValue{ std::string_view value = "efmqabguinkxcjordpzthwvlys"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::c, BETA, V, VI, VIII> m4;
-  m4.setInitialRotorPosition('x', 'p', 's', 'v');
+  m4.setGrundstellungs('x', 'p', 's', 'v');
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "tukaqyyoohvkjqtdvsbkrddazloyxhrdeozspzotbzmsbeiyashhjkimczwyikyjoewqhdzwfnoadoeioykauwvfpmhsynugikevfgbbaypcgotyseplsxqhkznb"sv;
   constexpr std::string_view expected = "umsueddreiyyvieginschauernbisfuenfwolkigvereinzeltschauerkkbereichdorabiseinsxfuenfxabendskksichtachtyyzehnsmseezwoybdreidbv"sv;
@@ -81,7 +81,7 @@ TEST(EnigmaM4Tests, P1030662)
   struct PlugboardValue{ std::string_view value = "efmqabguinkxcjordpzthwvlys"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::c, BETA, V, VI, VIII> m4;
-  m4.setInitialRotorPosition('w', 'i', 'i', 'j');
+  m4.setGrundstellungs('w', 'i', 'i', 'j');
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "lirzmlwrcdmsnklkbebhrmfqfeqazwxbgbiexjpyfcqaawsekdeacohdzkcztovsyhfnscmaimimmavjnlfxewnpuirinozncrvdhcgkcyrvujqpvkeuivvxglqmkrjmdmlxllrlybkjwrxbqrzwgccndopmgckj"sv;
   constexpr std::string_view expected = "uuuvirsibennuleinsynachrxuuustuetzpunktluebeckvvvchefvierxuuuflottxxmituuuviersibennulzwounduuuviersibennuldreizurflenderwerftluebeckgehenxfondortfolgtweiteresx"sv;
@@ -95,7 +95,7 @@ TEST(EnigmaM4Tests, P1030663)
   struct PlugboardValue{ std::string_view value = "efmqabguinkxcjordpzthwvlys"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::c, BETA, V, VI, VIII> m4;
-  m4.setInitialRotorPosition('o', 'd', 'b', 's');
+  m4.setGrundstellungs('o', 'd', 'b', 's');
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "wjpsbiybzwezgbqmunmkcrjgricyqwbtxttuliiliwmgqzceabyuabinyqpyrnstpkmhvqsbelhrtdhybnakwlrabomvzpwr"sv;
   constexpr std::string_view expected = "uuuzwodreidreiachtvvvchefvierxuuuflottxxmituuuzwodreisechseinszumdockbetriebrendsburgentlassenxk"sv;
@@ -109,7 +109,7 @@ TEST(EnigmaM4Tests, P1030664)
   struct PlugboardValue{ std::string_view value = "efmqabguinkxcjordpzthwvlys"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::c, BETA, V, VI, VIII> m4;
-  m4.setInitialRotorPosition('b', 's', 'o', 'j');
+  m4.setGrundstellungs('b', 's', 'o', 'j');
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "snnjzfembckjqovtwhlwubcfabrbjseproqrzlbcxullvpnjdbmuxlrggdwwxkbewthcbuvrbhazamvofqffqxxwukwwjnyvrtxgntithnj"sv;
   constexpr std::string_view expected = "mituuuvirsgbennulzwoyvirsibenyuldreiyzwodreisechseinsumeinsnuluhrjsassnitzjausnachisonderburgjfahrtfueycyyz"sv;
@@ -123,7 +123,7 @@ TEST(EnigmaM4Tests, P1030665)
   struct PlugboardValue{ std::string_view value = "efmqabguinkxcjordpzthwvlys"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::c, BETA, V, VI, VIII> m4;
-  m4.setInitialRotorPosition('d', 'i', 't', 'l');
+  m4.setGrundstellungs('d', 'i', 't', 'l');
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "osjfneiddkrblzacosgapemnrkpvgvkrvpztewhnaatfvhnhyrgszvekpnfazviatvjsliqwgrgcbfss"sv;
   constexpr std::string_view expected = "uuueinseinsnuldrfikkeiselekkvodvonfduuuostingxxxsofortumfangdovkarbeithergebennm"sv;
@@ -137,7 +137,7 @@ TEST(EnigmaM4Tests, P1030666)
   struct PlugboardValue{ std::string_view value = "efmqabguinkxcjordpzthwvlys"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::c, BETA, V, VI, VIII> m4;
-  m4.setInitialRotorPosition('p', 'f', 'y', 'b');
+  m4.setGrundstellungs('p', 'f', 'y', 'b');
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "vxoyxwlhsgggsbklwkzoftrljzeqkomegpljuaahmzbjmrpfiybwjehdnfntlokqyxdn"sv;
   constexpr std::string_view expected = "haengemictangeleituuuvdrsibennuleinsanxxuuuzwodreidreiachtkkkaiserkk"sv;
@@ -151,7 +151,7 @@ TEST(EnigmaM4Tests, P1030667)
   struct PlugboardValue{ std::string_view value = "efmqabguinkxcjordpzthwvlys"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::c, BETA, V, VI, VIII> m4;
-  m4.setInitialRotorPosition('h', 'y', 'k', 'k');
+  m4.setGrundstellungs('h', 'y', 'k', 'k');
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "zboqcpkztpxxwswxkxelbmdumwjnpkcgmxgywhtgmrlrcuqwfuyaitnfqfnpuprkovnhjnvfqbnvsgmsklmtvvvhstoikbolvekjzjwhkdwbftpoxqacjyyjqypgtoimytacobmuzszwiqxewtvupngedkpsgotzxwfnsphvcpvdfeen"sv;
   constexpr std::string_view expected = "stuekowarnemvendeyzwosechvxuuuflottxhachrxfxdxuuuausbildungvvvhevthaxxeinseinsdgeinuluhrmitetwaeineeinjnulnuofluechtlikgemarsbhwarnemuendenachjnyborgjjnyborznnannibrunobesetztq"sv;
@@ -165,7 +165,7 @@ TEST(EnigmaM4Tests, P1030668)
   struct PlugboardValue{ std::string_view value = "efmqabguinkxcjordpzthwvlys"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::c, BETA, V, VI, VIII> m4;
-  m4.setInitialRotorPosition('r', 'x', 'c', 'i');
+  m4.setGrundstellungs('r', 'x', 'c', 'i');
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "uzttxodteifjumxkvlnekjqghswduibfiapyzmofczgbctxnxuefdtuiwnzqbxasiufrlsxjezrenczqsacksvqgvxcagnuunscsezdvufymzxpgigccwzrkdcwevrvkujbryzcyydmsdqrzshzosuokepvlpddqamlavqzbzgmz"sv;
   constexpr std::string_view expected = "komxadmxuuubooteyfduuuausbxyfduuuostysssmmmhhhsssostazwwfunfxuuuflottxyfunfxuuuflottxyhakaxkielvonvontorpxfangbooteinsneunxxeinszwouhrjkielweingelaufenyffftttbleibtbesetztr"sv;
@@ -179,7 +179,7 @@ TEST(EnigmaM4Tests, P1030669)
   struct PlugboardValue{ std::string_view value = "efmqabguinkxcjordpzthwvlys"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::c, BETA, V, VI, VIII> m4;
-  m4.setInitialRotorPosition('d', 'g', 'o', 'e');
+  m4.setGrundstellungs('d', 'g', 'o', 'e');
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "vfofztntoqxhmhysuarpwedaeeoxnydzqzhxmfxgmrpcofervivuqngcsaovxdzwrugvadackfuootdxqzbnxdgvxbfpoevrpbecsyysiabwawgcwcfzroyaxsrgvnsluuipmtqikleztanxbanmtfkzjnoitinzvciegbxadztmkypwttdzxzkdibzitqresnhlqiittpunkraztbsomimllwtlekvdsfqmfbbecfhedcaqwipinclauvbsjkcmoxxmjgepmiofueoxpgquiyowvpdcnshw"sv;
   constexpr std::string_view expected = "ssdcheffunfxuuuflottxxeinskktttfffeinsachtmitzwostellkartenausruestungskagerrakundnorwegenmithafenplaenenundeinsexemplarlfdxbefxbbbddduuuooopppnrxsiebenvomzwovierxvierxvierfunfxsofortneustadtinmarschsetzenxzwokktttfffeinbneunvorlpeufigkielbleibenxdheikkbestartehxngerbetenxxfxdxuuuausbxkf"sv;
@@ -193,7 +193,7 @@ TEST(EnigmaM4Tests, P1030671)
   struct PlugboardValue{ std::string_view value = "efmqabguinkxcjordpzthwvlys"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::c, BETA, V, VI, VIII> m4;
-  m4.setInitialRotorPosition('l', 'w', 'g', 'n');
+  m4.setGrundstellungs('l', 'w', 'g', 'n');
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "scxbdtzlxvdmeihbbhnetijldfcwbgrmthswqntyokqgvzkznjvpgakddqazagvjhkifnlqixoyakfqqubakgyahrdrxltovypnhjdzftyocltihhcsqbpftohdizjggdsjicpjdexibldycmtgyarltchjkfntnlfeygflytbillxtkfxnhpwyyofldbqvq"sv;
   constexpr std::string_view expected = "vonvonuuueinsnulnulachtkkgessnerkrtxnulneundreinuluhrvonluebecktravemuendeeinxzusatzfuerfunfuuuflottxjtreiboalverbrxvomeinsxvirxbisdreinulxvirxsechsyeinscbmxbestandameinsxfunfxxvirfunfyneuncbm"sv;
@@ -207,7 +207,7 @@ TEST(EnigmaM4Tests, P1030672)
   struct PlugboardValue{ std::string_view value = "efmqabguinkxcjordpzthwvlys"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::c, BETA, V, VI, VIII> m4;
-  m4.setInitialRotorPosition('u', 'y', 'u', 'a');
+  m4.setGrundstellungs('u', 'y', 'u', 'a');
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "nbayxscjpeqodzylclbkmdbsqvdvbzmoqpzttpggwtowagarfkjqoffckvbribtbaqkuzxbqmjalhkaltthdejstlzjxxzmzlzblujqesjyuxwnrldrxyefrrlqucmhzpudvzgfcoosdlnohixybuvhhpgsz"sv;
   constexpr std::string_view expected = "fxdxueuostkkingxkkvonvonuuueinseinsnuldreikkeiselekkxxeinskkundichtigkeitrohrvierxkkbeyyundentwaesserungkkzwokkschweissenkuehlwasxerleitunginvierbackbordlbq"sv;
@@ -221,7 +221,7 @@ TEST(EnigmaM4Tests, P1030673)
   struct PlugboardValue{ std::string_view value = "efmqabguinkxcjordpzthwvlys"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::c, BETA, V, VI, VIII> m4;
-  m4.setInitialRotorPosition('a', 'w', 'g', 'i');
+  m4.setGrundstellungs('a', 'w', 'g', 'i');
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "uvtsjfgrcrkxqowlcbkknxiqrevqhnzdgonipkunsmorftoawnsjjjvrxzujsdlgjsakergesfpwwdmccipdunidialhzjycplztnbycedxhyddckawxsnlemebsjyzk"sv;
   constexpr std::string_view expected = "fuenfteuuuflottxananuuuzwofuedfeinssiebenxxspeziahistfuertelekinanlagewarteaufuuuleitstellexfragexxwannwirdspezialistabgeholtxbn"sv;
@@ -235,7 +235,7 @@ TEST(EnigmaM4Tests, P1030675)
   struct PlugboardValue{ std::string_view value = "efmqabguinkxcjordpzthwvlys"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::c, BETA, V, VI, VIII> m4;
-  m4.setInitialRotorPosition('s', 'c', 'h', 'l');
+  m4.setGrundstellungs('s', 'c', 'h', 'l');
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "tawzzynzggmicvlsadlqfdfkhdgzlseemdffbqlyiseiwkdondwjwetkzowwyltyiiowsmcftgnlkozcaawhbhfjdrwldhfhewubpwvdezfpbocvkecvfxwzgsvbdphltvojcflsqnsodyfmbqfqulthdisgoqurabehhibnxnaaklejmxqhjwxavdlvtptstdcpwpyxcuvwafjttsfuspthosthxadwrqwzjctukwcwhyfyqtrtpkppjgpmdzqdaxaizlwcadyzutlxjjudqgmfwzrwzxbqrhncrufuzz.laldhhoibwypktsrnquhmuptfwuhwbikmasacvprelbrrmrklzwlvsfguqffxtavqihxdxrkqvgarlmzdbmdgrynwiyshwcnhiwxyfbfgxxqnptserocvytojtkklqraludqmufakrhkojcmwpszhnavvsewffpgrjtvnolsgrerkxscywboqtpxoxjlqxspytmeoxourshibybnwqefptggmcvxngcdfqiylcmpdlwooaalodswcdawozombgdzoqkzwqkfrmrwchgwfuerwpjaqfdrbvoaeyyaiynpcljdxocbazohqokvufglqnxqyduzjifxrvjdq.ooogxignonpeqlkqbtvj.danixq.fdyxrdtqtfp.zeheomxpppfggltvfodhbsqpaqmddwxmmgajzvursiygaaxdzdv"sv;
   constexpr std::string_view expected = "binefduuuausbxyvierxyzwofunfxuxzwouechsxuuuflxxhiervorliegendekkkrttbbbeinermmmsssflxzeigenimmerwiedjrschlezhtefahrdisziplinuuubooteingeleitensowiebeialleinmarschgrosszuegigeabweichungenvonzwgngswegseiesdurchfehlerhaftenavigationygrosszugigeausweichbewegungenoderleichtfertigesabschneidenbeikursaen.erungenxichmacheesdenkommandantenerneutzurpflichteinerseitszwangswegegenaueinzuhaltenywobeiabstandvonbojenstrichfunfnulbiseinsfunfnulmmmbetragensollyanderseitsbemfahrenimgeleitdievorantrittdesmarschesbeimgeleitfuehrerzuerfragendenbefehleueberfahrwniseundabstandvomgeleitpersoenlichinnezuhaltenxbeiverstoessenydiemirgemeldetwerdenybeh.lteichmirsofortigeab.oesung.esbetrxkomm.ndantenvorxxkomxadmxuuubootegkdosvierzwozwozwobefxz"sv;
@@ -249,7 +249,7 @@ TEST(EnigmaM4Tests, P1030676)
   struct PlugboardValue{ std::string_view value = "efmqabguinkxcjordpzthwvlys"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::c, BETA, V, VI, VIII> m4;
-  m4.setInitialRotorPosition('n', 'l', 'k', 'o');
+  m4.setGrundstellungs('n', 'l', 'k', 'o');
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "cremrwllimbxdlotdindygyktjpyctcwdtpxxtnatvfzunacfcqlwdqrfwqnxjgmaswakgzbkmaeaknzporyahwfxyap"sv;
   constexpr std::string_view expected = "uuujagdkeineveraenderungengegwnleitnrxeinsviersiebenxxadmxwwwestlxostseeltnrxeinsfuenfzwobbv"sv;
@@ -263,7 +263,7 @@ TEST(EnigmaM4Tests, P1030679)
   struct PlugboardValue{ std::string_view value = "efmqabguinkxcjordpzthwvlys"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::c, BETA, V, VI, VIII> m4;
-  m4.setInitialRotorPosition('j', 'd', 'p', 'c');
+  m4.setGrundstellungs('j', 'd', 'p', 'c');
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "qghubzapkaehqmrjtwewbtdbrisuvljmkbspdkzasgjsipxfsopblyqvppraudzxdwrwazhjnanmbjrizdyrqjvt"sv;
   constexpr std::string_view expected = "eomxadmxuuzbooteyfduuuaesbxytorpxinspektionyuuutendermosellonvonkrefeldxxeinseinsviernul"sv;
@@ -277,7 +277,7 @@ TEST(EnigmaM4Tests, P1030681)
   struct PlugboardValue{ std::string_view value = "efmqabguinkxcjordpzthwvlys"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::c, BETA, V, VI, VIII> m4;
-  m4.setInitialRotorPosition('y', 'o', 's', 'z');
+  m4.setGrundstellungs('y', 'o', 's', 'z');
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "lanotctouarbbfpmhphgczxtdygahgufxgewkblkgjwlqxxtgpjjavtoyjfgslppqihzfxoebwiiekfzlcloaqjuljoyhssmbbgwhzanvoiipyrbrtdjqdjjoqkcxwdnbbtyvxlytapgveatxsonpnynqfudbbhhvwepyeydohnlxkzdnwrhduwujumwwviiwzxiviuqdrhymncyefuapnhotkhkgdnpsaknuaghjzsmjbmhvtreqedgxhlzwifuskdqvelnmimithbhdbwvhdfyhjoqihortdjdbwxemeayxgyqxohfdmyuxxnojazrsghplwmlrecwwutlrttvlbhyoorglgowuxnxhmhyfaacqekthsjw"sv;
   constexpr std::string_view expected = "krkrallexxfolgendesistsofortbekanntzugebenxxichhabefolgendenbefehlerhaltenxxjansterledesbisherigxnreichsmarschallsjgoeringjsetztderfuehrersieyhvrrgrzssadmiralyalsseinennachfolgereinxschriftlschevollmachtunterwegsxabsofortsollensiesaemtlichemassnahmenverfuegenydiesichausdergegenwaertigenlageergebenxgezxreichsleiteikktulpekkjbormannjxxobxdxmmmdurnhfkstxkomxadmxuuubooiexkp"sv;
@@ -291,7 +291,7 @@ TEST(EnigmaM4Tests, P1030682)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('m', 'v', 'y', 'y');
+  m4.setGrundstellungs('m', 'v', 'y', 'y');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "piarmjtbfrgmebdsbogcrvbcoxyohrwdlqixqycxzskflqmsimtqbnzdtxdqivfuygliatlerqyqksixmmzukztvfcjppfvgzgoe"sv;
   constexpr std::string_view expected = "fffddduuumstvinvonhakfroennelqaufgggzwonulzwoneuxuubzwovomzwoachtxvserxxjhrchtjhiernichteinzelgufenf"sv;
@@ -305,7 +305,7 @@ TEST(EnigmaM4Tests, P1030683)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('f', 'h', 'f', 'a');
+  m4.setGrundstellungs('f', 'h', 'f', 'a');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "pjvsrppqdgkldenenwljlymarzjgdkdpftkrkwfbvzsvcngilvuwqrvydnqpjdhitdkodtssoqaajsjsgzwexujjwjazeycascaq"sv;
   constexpr std::string_view expected = "gruppenmarymhmituuudreinulzwovirunbuugzwofunfdreiochtnachtravemuevdevvvuuudreinuleinsvirkkmarbachkkm"sv;
@@ -319,7 +319,7 @@ TEST(EnigmaM4Tests, P1030684)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('v', 'y', 'a', 'a');
+  m4.setGrundstellungs('v', 'y', 'a', 'a');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "rfbywkikeldchbsxunfjfsnrrvfwasxylqcqfadyjxntbmvlrdcgulowhtbgwussoqhgayedkmjdngvznzfoxfkmibkqnxfdwfivgcymjvqckyqfbhykzscj"sv;
   constexpr std::string_view expected = "vvvuuuvirsobennuleinsxxmituuuvirsibennulzwoyvirsibennuldreiyzwodreisechseinsyzwodreidreiachteinsdreioitnachwzstenpassirt"sv;
@@ -333,7 +333,7 @@ TEST(EnigmaM4Tests, P1030685)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('q', 'x', 'f', 'w');
+  m4.setGrundstellungs('q', 'x', 'f', 'w');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "fcjynblbwhtrxxwpixglgosslkcfxbfiernbtnnwdprxgbeqcxwxspalaxwzkkqgeydwajcoigvkqqchkpvldxptzofebrdoiemukgcncekiclldegcxmnpdmipuuxhjgrdzaruwdroufyfviuqfefurwgmbpvmgdlgvnunpkfkgsyahexxwurjxnjtsrqwbrdsjubvlrsydpcmelcvccmgvrnvreyqigzibwgil"sv;
   constexpr std::string_view expected = "komxadmxuuubooteysssmcmhhhsssosthfxdxufhostvonvonchefvierteuudflottxswgnemuendeankeraufxmarschnachhoerupyyhaffangetretenxstellenynswinemuendehabenxzusatzfuerleitungxxgusnavfritzuebelstelltgegenstellenverkehrabzwonullnullnulluhreinbt"sv;
@@ -347,7 +347,7 @@ TEST(EnigmaM4Tests, P1030686)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('x', 'v', 'l', 'i');
+  m4.setGrundstellungs('x', 'v', 'l', 'i');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "iaaoveuexxpjyraewtcukipwratczapvsmymwtehsxrvtrhcftesboehkvgnfclvwdjxqosqnkbgzyllgzlcvuqlqbmadlqekvbfriea"sv;
   constexpr std::string_view expected = "spruchschliesselvonffftttmiluhrzeitgrupseeinszwozhoviersofortwergebenydaffftttnichtzuloesenfunkleitungxz"sv;
@@ -361,7 +361,7 @@ TEST(EnigmaM4Tests, P1030687)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('p', 'i', 'w', 'm');
+  m4.setGrundstellungs('p', 'i', 'w', 'm');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "gcmalctwampleigdfczlugvywbetkrmlfnjexrzmtyscuiwqkhfyujaskiqdzpdqhzgonwvnbksfymyjpftpajzciambzpkaqysxdwsxrkkupnbcmbrfpvfkgzbvxvydaulnwlazxtghsqmdthshevlvwslu"sv;
   constexpr std::string_view expected = "neissefurkcrvxkptxheilmanndvvfangbtxzwovierxxxelabgabedurchgefuhrtxkuriermitscaluevselmitcelnochnichteeugetroffenxfrggesolliqhhierwzrtwnojsrwarnemgndqffhenm"sv;
@@ -375,7 +375,7 @@ TEST(EnigmaM4Tests, P1030688)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('j', 'm', 'l', 'w');
+  m4.setGrundstellungs('j', 'm', 'l', 'w');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "nzeezplzmgwwmxiubhwvclfcukvrjfvjhbsejlacvqknquhtxuqijtchsuumbcfqculagjacnzduggpmfpvbnngahbopalebvqhfbdwsbaqbgnoknbnmriydaznpunbpatlwpclildtszinjmhsngflwvtjyxbssnmohkdxcbnpifcfvdhztxycfsbhrequicsstjfamfjaqjfduzvjtcveuglmerrhlcwfsiainjonbjsacybfqtlyakghiqtnmuichacsryufirdwyidfdgwtuoqbgcisypwfcmpepcemubdxhrljibatrcrlmpjztzrvfikrndkelygicjudealjdjjheomuxauuajiuspeihjuzfmudyktkhfajsvijwlfdejnpcjvbupinrajwibpdngwlyuqgvddegdkruzkqibmdsdgbnqcbslgplhojjcnzpvornzfivudirpcoxoqxf"sv;
   constexpr std::string_view expected = "uuuyystuetzpunktwesermuendeytttfffeinsfunfyttcfffeinssibenvonvonfxdxuuuostvvvoooxxaufdortxfffttteinsfunfvierneunyyzwoneunvomzgoneunxvierxxeinskkvondenfunfnzltonmeqxerfuegbarenhrovijdtetwadreinultonnenmoeglichstvollstaendigeuuuyybootsausrupstunpenzmsammenstellenundmittttfffeinsfunfnnchhqlgolrndverlagernxzwokkrestproviantvonetwazwonultonnenmittttffftinssibenanjsaarjrenwsburgabgebenxzusatzvuertttfffeinsfunfundtttfffeinssibenxxsofortauslaufennachwesermuendexbestaetigencwq"sv;
@@ -389,7 +389,7 @@ TEST(EnigmaM4Tests, P1030689)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('k', 'p', 'v', 'g');
+  m4.setGrundstellungs('k', 'p', 'v', 'g');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "dunkcanqmigsfkqxuwstqdkqesdjgkyywbskxaxcgzmutakeqbnqwxenuxtdfojnepdjmirzggaaamkwzmfkoskoyebkffpdimtlgyaqsrzgqvodylsfebcewhbvlfhywcronyfufvozvforzsqimsrcxsrzqfwzuatzdoampmfowxnmcdiyymtyxbnl"sv;
   constexpr std::string_view expected = "leitungvonvoneinsneunxuuuflottfffttteinszwozwovieryysezhszwohiergeloestxverschluesseltnachrrrhhhvvvxinhaltxxuuucaakkkvonvonwoewezwonxeinsdreieinsfuenfbhransteuerungslonnejfehmarnsuedwestju"sv;
@@ -403,7 +403,7 @@ TEST(EnigmaM4Tests, P1030690)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('t', 'b', 'f', 's');
+  m4.setGrundstellungs('t', 'b', 'f', 's');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "eqtnqsdbfjhwgkhphxefoygezpjmhzcikpcimpsiguzmgtiwbrtfwejtdiljjdpjvmbvuxkgsvxpezerjxzfwwvcpssfkxbsitwfkobjxxyzdyjs"sv;
   constexpr std::string_view expected = "uuuvirsibennuleinsananeinsnulxsssdddxxerbitteweitergeleitvonroteinsdreiaaanachhoeruphaffamzwoofunfxnuldreiuhrrlt"sv;
@@ -417,7 +417,7 @@ TEST(EnigmaM4Tests, P1030691)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('i', 'i', 'd', 'h');
+  m4.setGrundstellungs('i', 'i', 'd', 'h');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "iyqmowapyiyeolewbezyrvlfrceowtryqiyfrasbsaxyymvdcejjdfuivjmonuagmswjmyitcdqfhnynpobwfaitlhnt"sv;
   constexpr std::string_view expected = "viruufflottlxvvvuuuvirsiuennuleinsxxerbittejkieljfuerschleifenfahrteinsvirtageueberfaelligtk"sv;
@@ -431,7 +431,7 @@ TEST(EnigmaM4Tests, P1030692)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('n', 'g', 'h', 'y');
+  m4.setGrundstellungs('n', 'g', 'h', 'y');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "hdqqrdlcwfzvivcruicvnhdqislnmwcoixtbgpmkkqbgvhclelodactdlcjzpsxxctibewomjskpwvbvqcteijtjzsibksvikhwzovqojqttplkm"sv;
   constexpr std::string_view expected = "diefunkspruechemituhrzeitjruppeneinsneunzwoeinsyyeinsfunffunfzwosindnichtgeloestwordenxneuhergebenvvvfunkoeitung"sv;
@@ -445,7 +445,7 @@ TEST(EnigmaM4Tests, P1030693)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('l', 'p', 'w', 'j');
+  m4.setGrundstellungs('l', 'p', 'w', 'j');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "nrnrsecndekhlhjimhlccoilhtwsmpxsgpgfteuburwwmszmpenlqayeojcqtzeyrmhytdufbzywmfvqesqgywtohwkdsumorbgzirjeewcqkbuzjyjrgopxdtwuenuiokvtdvnrvewkdnp.jaf.....wltpqayu.xfpx.uahktqtvyouzkmzyehvrsrgjjyizuphkxbpbpwkuruygxhgklj"sv;
   constexpr std::string_view expected = "komxadmxuuubooteyfxdxuuuausbxvonvonjottowuenschexxueberwegzwoywegdreiundwegvieralleinmarschnachjneustadtjangetretenxmarschfahrteinszwosmschaltu.ggr.....enundnnn.bbxn.rwegenkarteninwarnemuendeuedrostocknichtbekommenxp"sv;
@@ -459,7 +459,7 @@ TEST(EnigmaM4Tests, P1030694)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('r', 'c', 'p', 'o');
+  m4.setGrundstellungs('r', 'c', 'p', 'o');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "vbbhsytwzeedgkycakyvwbwuuzvzigctbzlzyuhywilfyupbipcm"sv;
   constexpr std::string_view expected = "pllevonvonzehnxsidixxhafenwarnemuendefeindbesetztchv"sv;
@@ -473,7 +473,7 @@ TEST(EnigmaM4Tests, P1030695)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('v', 'i', 'n', 'v');
+  m4.setGrundstellungs('v', 'i', 'n', 'v');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "wfakacriwufsrwtorgfonhjtjxwyxzbraaboiukozpzbsvnhraazpzyhavszcdejguiqgwxbbmzzgcbfuglkecwm"sv;
   constexpr std::string_view expected = "leitungvvvuuuifuexzpktxwwwhavenxxffftttzwonuleinsdreierledigtxinhaatxxfffttteinszwozwovi"sv;
@@ -487,7 +487,7 @@ TEST(EnigmaM4Tests, P1030696)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('d', 'l', 'l', 's');
+  m4.setGrundstellungs('d', 'l', 'l', 's');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "dzwssuyrttvlnzntrvslzqowrtxyrzvxrrcdttfanrwkiwkgldcjdespeeciuonjprpbzoxikpfdqboujdfaftxksjcqdccrcxvlzrpa"sv;
   constexpr std::string_view expected = "toniananchefzwosechsuuuflottxxumuzwvdreisechszwobeipositioneinszwodoragetroffenxfolgeverbandmitgggsieben"sv;
@@ -501,7 +501,7 @@ TEST(EnigmaM4Tests, P1030697)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('g', 'h', 'h', 'i');
+  m4.setGrundstellungs('g', 'h', 'h', 'i');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "wtrtbzbrbwceugzrplprvioohfijhiranyqpktcwpogofzyoyyzdwjzvfcdupzifizguedvehwpv"sv;
   constexpr std::string_view expected = "fxdxuuuvstvvvtttfffeinssibenxxffftsaeinsneunzwosibenlyachtneunxicdbestaikigt"sv;
@@ -515,7 +515,7 @@ TEST(EnigmaM4Tests, P1030698)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('w', 'q', 'y', 'r');
+  m4.setGrundstellungs('w', 'q', 'y', 'r');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "vidtgybspaxvedjfkonpmxhtcnaafkxiowvczxutdgfsewgfaidhpkqvaraguaupwvrbfowo"sv;
   constexpr std::string_view expected = "tttfffzwoviervvvfxdxuuuxausbxxtravemuendebleibenxweiterebefehleatwartknx"sv;
@@ -529,7 +529,7 @@ TEST(EnigmaM4Tests, P1030701)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('y', 'r', 'w', 'r');
+  m4.setGrundstellungs('y', 'r', 'w', 'r');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "itwjpxtcnniwzbgaknwcpftkehwpdjlvzwtwshkumyzzamnlmhvtvptsclaoaxevaoqnoafomcsaiuglzynpdebqf"sv;
   constexpr std::string_view expected = "zwodreonulnuluhrtravemuendereedeausohnegeleitnachjkieljaufwegdreiysechsyeinsxmarschfahrte"sv;
@@ -543,7 +543,7 @@ TEST(EnigmaM4Tests, P1030702)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('m', 'd', 'a', 'f');
+  m4.setGrundstellungs('m', 'd', 'a', 'f');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "byiagvwlqkwnhfiepincohsnbkwsbrhxanecjwlgsmdmodulqagnqmodyskqvkqzjogujoszjlxpfolwykkqsxtshp"sv;
   constexpr std::string_view expected = "uuufunfdreivierkknollaukkananfunfuuuflottxnuleinszwonulbeirotnulsibengeankertxzumweitermar"sv;
@@ -557,7 +557,7 @@ TEST(EnigmaM4Tests, P1030704)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('a', 'd', 'l', 'x');
+  m4.setGrundstellungs('a', 'd', 'l', 'x');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "nywnbupripmnkaymlxvpmfmgtxgqekvpnxwoknkymvrhmlglqurjppsuphyzvqunkcfsxcwnefmvnfhwqwpffjcndcrgmxagwopcfqcynhwiqprooznlwqwu"sv;
   constexpr std::string_view expected = "travemuendeyyreedemitujudreinulzwovierunduuuzwofunfdreiacrtgeankertxffftttbleibubesetztpvvvuuudreinuleinsvieytdkarbachkk"sv;
@@ -571,7 +571,7 @@ TEST(EnigmaM4Tests, P1030705)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('u', 'y', 'x', 'c');
+  m4.setGrundstellungs('u', 'y', 'x', 'c');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "hvjxgdxresssxplxqlkzicekwu.zhwsjtbjubrummrdopktggqzcwrayapskzxbylxhbotjakoppzhakdtxyebokmwvstwtjxymnpntxhgfebpmpiqyjhlsgmmaapmmloxvkioyxqjb.ia..umt.ftx.fkldhptqimcbmzjfrbnv........................pwjvrphvwdteat.dwphwvjfdegekbxg.ajctvvzohici"sv;
   constexpr std::string_view expected = "uuuviersiebennuleinsyuuuvp.rsiebeneinszwoyuuudreinuleinsneunyfuenfxuuuflyttxnachrxqduuuausbxxxinabaenderungffftttvomdreinulxvierxuebernimmt.bl..jra.kym.uuviersibbennuueeesn........................ebeneinszwoxxv.nvonkomxadmxuqrw.otepppeinsxo"sv;
@@ -585,7 +585,7 @@ TEST(EnigmaM4Tests, P1030706)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('m', 'd', 'a', 'f');
+  m4.setGrundstellungs('m', 'd', 'a', 'f');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "byiagvwlqkwnbhiepingohsnbkwsbrhxanecjwlgsmdmodulqagnqmodyskqvkqzjogujoszjlxpfolwykkqsxtshpcgyitekustbluzcujnfdrxgfnbwuqzdvvlujzn"sv;
   constexpr std::string_view expected = "uuufunfdreivwmrkknojlaukkananfunfuuuflottxnuleinszwonulbeirotnulsibengeankertxzumweitermarschnachtrjvemuendeerwarteqeleitjlechjm"sv;
@@ -599,7 +599,7 @@ TEST(EnigmaM4Tests, P1030707)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('a', 'd', 'l', 'x');
+  m4.setGrundstellungs('a', 'd', 'l', 'x');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "nywnbupripmnkrumlxvpmfogtxgqekvplxwoknkymvrhmlglqurjpihupfyzvqunkcfsxcwnefmvnfhpqwpfcjcrdcrgmxagwopgfqcynhliqprooznlwq..d..."sv;
   constexpr std::string_view expected = "travemuendeyyajedemituuudreinulzoovierunduuuzwofunfdrtlacbtgeankertxffftttbleibtbeseoztxvvvuuudreinkleinsvyeytdkarbach..k..."sv;
@@ -613,7 +613,7 @@ TEST(EnigmaM4Tests, P1030708)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('m', 'r', 'p', 'v');
+  m4.setGrundstellungs('m', 'r', 'p', 'v');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "vzgljklveoeitylrohkvjomqriffcvuituztpelmtxbtbzxxaabwlkbqulyxddmugierricezrrdpzzhepalwgekczvfhjikkdkosokqddwsiuhqgdercjypukozhytjyxungnfdggp.qtm."sv;
   constexpr std::string_view expected = "fxdxuuuostvonvontttfffeinssibenxxdurchkerztegerunginderschleuseerstnulzwondlnuluhrmfttttfffexnsfuenfbuunsbuettelausxbeabsichtiyecuxhavenzug.hen."sv;
@@ -627,7 +627,7 @@ TEST(EnigmaM4Tests, P1030709)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('t', 'h', 'n', 'r');
+  m4.setGrundstellungs('t', 'h', 'n', 'r');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "vdtlyzainsdvhvdpkwygayhobiligmyxmsedqsrarvdlkalgfhandfyubejvxxnmceoidjsjysyieldayslzfuljnlocecmjcejglnpklfvfffskwacysldxjgfhunwajle.xhy.geb.qts.quu."sv;
   constexpr std::string_view expected = "funkspruchmituhrzeitgruppezwozwozwoeinshiersehrverstuemmeltundchviernulxgruppevollkommenunklarxnachpruefenusdneuverschluesseltabset.enx.fun.lei.ung."sv;
@@ -641,7 +641,7 @@ TEST(EnigmaM4Tests, P1030710)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('g', 'c', 'x', 'o');
+  m4.setGrundstellungs('g', 'c', 'x', 'o');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "dxersszklrohuryimndpiaqwwydrmeosjwtffkiptwemnufkoxtklojykighcfwfffhlosfibgwidqvqyxqkrphi.kjq"sv;
   constexpr std::string_view expected = "komxadmxuuubooteyfuenfxuuuflottxyvierxuuuflottxvvvuuudreinuldreinulkkluttmannkkxxmituuud.ein"sv;
@@ -655,7 +655,7 @@ TEST(EnigmaM4Tests, P1030711)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('w', 'h', 'b', 't');
+  m4.setGrundstellungs('w', 'h', 'b', 't');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "dlsmybzrapxzjhsegrmddu.oarwgdalkguddnrvjzilrzqnssxndgrseemnathcezbhrcekwgkozundkerarve.lxwpycumncznj"sv;
   constexpr std::string_view expected = "funfuuuflottxvonvonzwo.echsuuuflottxxvoraussichtlicheseintreffenuuuzwodreisechsfunfink.eldreixfunfxm"sv;
@@ -669,7 +669,7 @@ TEST(EnigmaM4Tests, P1030712)
   struct PlugboardValue{ std::string_view value = "aqhijflcdepgmvukbrzyonwxts"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::b, GAMMA, IV, III, VIII> m4;
-  m4.setInitialRotorPosition('f', 'u', 'r', 'o');
+  m4.setGrundstellungs('f', 'u', 'r', 'o');
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "eflpbhcfkmrpfqyxageduvasmxlymbprytwszmjchzivdjybpmnhrapdlztabqhfiosbqiblrwowaovsciibzddrenhdgkvpczguwmco"sv;
   constexpr std::string_view expected = "xuuuflottxvvvuuufunfdreivierkknollaukkeinsachtuhrimgeleitvvvzwonuleinsviervonrotnuleinsbisrotnulsiebenfh"sv;
@@ -683,7 +683,7 @@ TEST(EnigmaM4Tests, P1030713)
   struct PlugboardValue{ std::string_view value = "abpgjidhfetzsoncuwmkqvrxyl"sv; };
   // clang-format on
   enmach::EnigmaM4<Plugboard<PlugboardValue>, ukw::c, GAMMA, V, II, VIII> m4;
-  m4.setInitialRotorPosition('z', 'p', 'e', 'u');
+  m4.setGrundstellungs('z', 'p', 'e', 'u');
   m4.setRingstellung('a', 'a', 'f', 'b');
   constexpr std::string_view input    = "mpsanxaasrpbmxmnjmjyypugpfzoyaeqievwioxhrvjeckafvasoielmfybygabxmywoivimkgba"sv;
   constexpr std::string_view expected = "leitungvvvuuustuetzpktxwwwhavenxxfffttteunszwozwovierhuermitvrrhhhvvvgeloest"sv;

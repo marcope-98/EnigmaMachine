@@ -96,12 +96,12 @@ namespace enmach
     }
 
     template<class T>
-    constexpr auto setInitialPosition(T initial_position) -> void
+    constexpr auto setGrundstellung(T grundstellung) -> void
     {
       if constexpr (std::is_same_v<T, char>)
-        this->position_ = static_cast<std::uint8_t>(initial_position - 'a');
+        this->grundstellung_ = static_cast<std::uint8_t>(grundstellung - 'a');
       else
-        this->position_ = static_cast<std::uint8_t>(initial_position);
+        this->grundstellung_ = static_cast<std::uint8_t>(grundstellung);
       this->setInternalDifference();
     }
 
@@ -116,9 +116,9 @@ namespace enmach
     }
 
   private:
-    constexpr auto setInternalDifference() -> void { this->internal_difference = (this->position_ + enmach::ETW.size() - this->ringstellung_) % enmach::ETW.size(); }
+    constexpr auto setInternalDifference() -> void { this->internal_difference = (this->grundstellung_ + enmach::ETW.size() - this->ringstellung_) % enmach::ETW.size(); }
 
-    std::uint8_t position_{};
+    std::uint8_t grundstellung_{};
     std::uint8_t ringstellung_{};
     std::uint8_t internal_difference{};
   };
