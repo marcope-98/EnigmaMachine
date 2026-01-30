@@ -19,6 +19,44 @@ $ make -j4
 $ ./test/enigma_machine_tests # Run the tests
 ```
 
+## Example
+```cpp
+#include <iostream>
+#include <string_view>
+
+#include "enmach/enmach.hpp"
+
+using namespace std::literals;
+using namespace enmach::rotor_tags;
+
+struct Plugboard
+{
+  constexpr static std::string_view value = "efmqabguinkxcjordpzthwvlys"sv;
+  constexpr auto operator()(char letter) const -> char { return this->value.at(static_cast<std::size_t>(letter - 'a')); }
+};
+
+int main(void)
+{
+  enmach::EnigmaM1<
+    Plugboard,                        /* Plugboard */
+    ukw::B,                           /* Reflector */
+    I, II, III>                       /* Rotor ordered left to right */ 
+    m1;
+  m1.setGrundstellung('a', 'a', 'a'); /* Set initial position left to right */
+  m1.setRingstellung('a', 'a', 'a');  /* Set ring settings    left to right */
+
+  constexpr std::string_view input = "abcdefghijklmnopqrstuvwxyz";
+  for (const auto &character : input)
+  {
+    m1.increment();
+    std::cout << m1.exec(character);
+  }
+  std::cout << "\n";
+  
+  return 0;
+}
+```
+
 ## Features
 ### Plugboard (Steckerbrett)
 The plugboard (Steckerbrett) was the first stage of substitution in the Enigma's encryption path and one of the most important contributors to its cryptographic strength.
