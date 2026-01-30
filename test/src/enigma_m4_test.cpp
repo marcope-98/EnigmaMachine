@@ -43,7 +43,7 @@ TEST(EnigmaM4Tests, P1030659)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "yupovejtbkonnfsaltwelqazjxtirjlliscsgxshejfynzqdnqsuxpgftjkwingorybjyadwnfclppnslwuybuqisxgq"sv;
   constexpr std::string_view expected = "fffddduuuausbildungvonvonzwosechsuuuflottxxtttfffzwodreiausgezqestetmitssssssgcgxtttfffzwoqi"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -57,7 +57,7 @@ TEST(EnigmaM4Tests, P1030660)
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "twnhyazgbilshewpglbpqlwqekitiafgzhwimcwdfxpafeilqzwfnrfttqhuoadvlrlgaoqkvlwlsjhwofjjsluveynrrajaqdkqbgmfycevkpfjpkowhhqzyzeqrtqikkxixtfpoemi"sv;
   constexpr std::string_view expected = "fxdxuuuostyfuncquuufxwttxvvvuuueinseinsnuldreikkeiselekkxxistsechsstuendlichesdockenvormittagsamdreixfunfxinrendsburggemxfxdxuuuostmoeglichl"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -71,7 +71,7 @@ TEST(EnigmaM4Tests, P1030661)
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "tukaqyyoohvkjqtdvsbkrddazloyxhrdeozspzotbzmsbeiyashhjkimczwyikyjoewqhdzwfnoadoeioykauwvfpmhsynugikevfgbbaypcgotyseplsxqhkznb"sv;
   constexpr std::string_view expected = "umsueddreiyyvieginschauernbisfuenfwolkigvereinzeltschauerkkbereichdorabiseinsxfuenfxabendskksichtachtyyzehnsmseezwoybdreidbv"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -85,7 +85,7 @@ TEST(EnigmaM4Tests, P1030662)
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "lirzmlwrcdmsnklkbebhrmfqfeqazwxbgbiexjpyfcqaawsekdeacohdzkcztovsyhfnscmaimimmavjnlfxewnpuirinozncrvdhcgkcyrvujqpvkeuivvxglqmkrjmdmlxllrlybkjwrxbqrzwgccndopmgckj"sv;
   constexpr std::string_view expected = "uuuvirsibennuleinsynachrxuuustuetzpunktluebeckvvvchefvierxuuuflottxxmituuuviersibennulzwounduuuviersibennuldreizurflenderwerftluebeckgehenxfondortfolgtweiteresx"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -99,7 +99,7 @@ TEST(EnigmaM4Tests, P1030663)
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "wjpsbiybzwezgbqmunmkcrjgricyqwbtxttuliiliwmgqzceabyuabinyqpyrnstpkmhvqsbelhrtdhybnakwlrabomvzpwr"sv;
   constexpr std::string_view expected = "uuuzwodreidreiachtvvvchefvierxuuuflottxxmituuuzwodreisechseinszumdockbetriebrendsburgentlassenxk"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -113,7 +113,7 @@ TEST(EnigmaM4Tests, P1030664)
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "snnjzfembckjqovtwhlwubcfabrbjseproqrzlbcxullvpnjdbmuxlrggdwwxkbewthcbuvrbhazamvofqffqxxwukwwjnyvrtxgntithnj"sv;
   constexpr std::string_view expected = "mituuuvirsgbennulzwoyvirsibenyuldreiyzwodreisechseinsumeinsnuluhrjsassnitzjausnachisonderburgjfahrtfueycyyz"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -127,7 +127,7 @@ TEST(EnigmaM4Tests, P1030665)
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "osjfneiddkrblzacosgapemnrkpvgvkrvpztewhnaatfvhnhyrgszvekpnfazviatvjsliqwgrgcbfss"sv;
   constexpr std::string_view expected = "uuueinseinsnuldrfikkeiselekkvodvonfduuuostingxxxsofortumfangdovkarbeithergebennm"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -141,7 +141,7 @@ TEST(EnigmaM4Tests, P1030666)
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "vxoyxwlhsgggsbklwkzoftrljzeqkomegpljuaahmzbjmrpfiybwjehdnfntlokqyxdn"sv;
   constexpr std::string_view expected = "haengemictangeleituuuvdrsibennuleinsanxxuuuzwodreidreiachtkkkaiserkk"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -155,7 +155,7 @@ TEST(EnigmaM4Tests, P1030667)
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "zboqcpkztpxxwswxkxelbmdumwjnpkcgmxgywhtgmrlrcuqwfuyaitnfqfnpuprkovnhjnvfqbnvsgmsklmtvvvhstoikbolvekjzjwhkdwbftpoxqacjyyjqypgtoimytacobmuzszwiqxewtvupngedkpsgotzxwfnsphvcpvdfeen"sv;
   constexpr std::string_view expected = "stuekowarnemvendeyzwosechvxuuuflottxhachrxfxdxuuuausbildungvvvhevthaxxeinseinsdgeinuluhrmitetwaeineeinjnulnuofluechtlikgemarsbhwarnemuendenachjnyborgjjnyborznnannibrunobesetztq"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -169,7 +169,7 @@ TEST(EnigmaM4Tests, P1030668)
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "uzttxodteifjumxkvlnekjqghswduibfiapyzmofczgbctxnxuefdtuiwnzqbxasiufrlsxjezrenczqsacksvqgvxcagnuunscsezdvufymzxpgigccwzrkdcwevrvkujbryzcyydmsdqrzshzosuokepvlpddqamlavqzbzgmz"sv;
   constexpr std::string_view expected = "komxadmxuuubooteyfduuuausbxyfduuuostysssmmmhhhsssostazwwfunfxuuuflottxyfunfxuuuflottxyhakaxkielvonvontorpxfangbooteinsneunxxeinszwouhrjkielweingelaufenyffftttbleibtbesetztr"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -183,7 +183,7 @@ TEST(EnigmaM4Tests, P1030669)
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "vfofztntoqxhmhysuarpwedaeeoxnydzqzhxmfxgmrpcofervivuqngcsaovxdzwrugvadackfuootdxqzbnxdgvxbfpoevrpbecsyysiabwawgcwcfzroyaxsrgvnsluuipmtqikleztanxbanmtfkzjnoitinzvciegbxadztmkypwttdzxzkdibzitqresnhlqiittpunkraztbsomimllwtlekvdsfqmfbbecfhedcaqwipinclauvbsjkcmoxxmjgepmiofueoxpgquiyowvpdcnshw"sv;
   constexpr std::string_view expected = "ssdcheffunfxuuuflottxxeinskktttfffeinsachtmitzwostellkartenausruestungskagerrakundnorwegenmithafenplaenenundeinsexemplarlfdxbefxbbbddduuuooopppnrxsiebenvomzwovierxvierxvierfunfxsofortneustadtinmarschsetzenxzwokktttfffeinbneunvorlpeufigkielbleibenxdheikkbestartehxngerbetenxxfxdxuuuausbxkf"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -197,7 +197,7 @@ TEST(EnigmaM4Tests, P1030671)
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "scxbdtzlxvdmeihbbhnetijldfcwbgrmthswqntyokqgvzkznjvpgakddqazagvjhkifnlqixoyakfqqubakgyahrdrxltovypnhjdzftyocltihhcsqbpftohdizjggdsjicpjdexibldycmtgyarltchjkfntnlfeygflytbillxtkfxnhpwyyofldbqvq"sv;
   constexpr std::string_view expected = "vonvonuuueinsnulnulachtkkgessnerkrtxnulneundreinuluhrvonluebecktravemuendeeinxzusatzfuerfunfuuuflottxjtreiboalverbrxvomeinsxvirxbisdreinulxvirxsechsyeinscbmxbestandameinsxfunfxxvirfunfyneuncbm"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -211,7 +211,7 @@ TEST(EnigmaM4Tests, P1030672)
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "nbayxscjpeqodzylclbkmdbsqvdvbzmoqpzttpggwtowagarfkjqoffckvbribtbaqkuzxbqmjalhkaltthdejstlzjxxzmzlzblujqesjyuxwnrldrxyefrrlqucmhzpudvzgfcoosdlnohixybuvhhpgsz"sv;
   constexpr std::string_view expected = "fxdxueuostkkingxkkvonvonuuueinseinsnuldreikkeiselekkxxeinskkundichtigkeitrohrvierxkkbeyyundentwaesserungkkzwokkschweissenkuehlwasxerleitunginvierbackbordlbq"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -225,7 +225,7 @@ TEST(EnigmaM4Tests, P1030673)
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "uvtsjfgrcrkxqowlcbkknxiqrevqhnzdgonipkunsmorftoawnsjjjvrxzujsdlgjsakergesfpwwdmccipdunidialhzjycplztnbycedxhyddckawxsnlemebsjyzk"sv;
   constexpr std::string_view expected = "fuenfteuuuflottxananuuuzwofuedfeinssiebenxxspeziahistfuertelekinanlagewarteaufuuuleitstellexfragexxwannwirdspezialistabgeholtxbn"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -239,7 +239,7 @@ TEST(EnigmaM4Tests, P1030675)
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "tawzzynzggmicvlsadlqfdfkhdgzlseemdffbqlyiseiwkdondwjwetkzowwyltyiiowsmcftgnlkozcaawhbhfjdrwldhfhewubpwvdezfpbocvkecvfxwzgsvbdphltvojcflsqnsodyfmbqfqulthdisgoqurabehhibnxnaaklejmxqhjwxavdlvtptstdcpwpyxcuvwafjttsfuspthosthxadwrqwzjctukwcwhyfyqtrtpkppjgpmdzqdaxaizlwcadyzutlxjjudqgmfwzrwzxbqrhncrufuzz.laldhhoibwypktsrnquhmuptfwuhwbikmasacvprelbrrmrklzwlvsfguqffxtavqihxdxrkqvgarlmzdbmdgrynwiyshwcnhiwxyfbfgxxqnptserocvytojtkklqraludqmufakrhkojcmwpszhnavvsewffpgrjtvnolsgrerkxscywboqtpxoxjlqxspytmeoxourshibybnwqefptggmcvxngcdfqiylcmpdlwooaalodswcdawozombgdzoqkzwqkfrmrwchgwfuerwpjaqfdrbvoaeyyaiynpcljdxocbazohqokvufglqnxqyduzjifxrvjdq.ooogxignonpeqlkqbtvj.danixq.fdyxrdtqtfp.zeheomxpppfggltvfodhbsqpaqmddwxmmgajzvursiygaaxdzdv"sv;
   constexpr std::string_view expected = "binefduuuausbxyvierxyzwofunfxuxzwouechsxuuuflxxhiervorliegendekkkrttbbbeinermmmsssflxzeigenimmerwiedjrschlezhtefahrdisziplinuuubooteingeleitensowiebeialleinmarschgrosszuegigeabweichungenvonzwgngswegseiesdurchfehlerhaftenavigationygrosszugigeausweichbewegungenoderleichtfertigesabschneidenbeikursaen.erungenxichmacheesdenkommandantenerneutzurpflichteinerseitszwangswegegenaueinzuhaltenywobeiabstandvonbojenstrichfunfnulbiseinsfunfnulmmmbetragensollyanderseitsbemfahrenimgeleitdievorantrittdesmarschesbeimgeleitfuehrerzuerfragendenbefehleueberfahrwniseundabstandvomgeleitpersoenlichinnezuhaltenxbeiverstoessenydiemirgemeldetwerdenybeh.lteichmirsofortigeab.oesung.esbetrxkomm.ndantenvorxxkomxadmxuuubootegkdosvierzwozwozwobefxz"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -253,7 +253,7 @@ TEST(EnigmaM4Tests, P1030676)
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "cremrwllimbxdlotdindygyktjpyctcwdtpxxtnatvfzunacfcqlwdqrfwqnxjgmaswakgzbkmaeaknzporyahwfxyap"sv;
   constexpr std::string_view expected = "uuujagdkeineveraenderungengegwnleitnrxeinsviersiebenxxadmxwwwestlxostseeltnrxeinsfuenfzwobbv"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -267,7 +267,7 @@ TEST(EnigmaM4Tests, P1030679)
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "qghubzapkaehqmrjtwewbtdbrisuvljmkbspdkzasgjsipxfsopblyqvppraudzxdwrwazhjnanmbjrizdyrqjvt"sv;
   constexpr std::string_view expected = "eomxadmxuuzbooteyfduuuaesbxytorpxinspektionyuuutendermosellonvonkrefeldxxeinseinsviernul"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -281,7 +281,7 @@ TEST(EnigmaM4Tests, P1030681)
   m4.setRingstellung('a', 'a', 'e', 'l');
   constexpr std::string_view input    = "lanotctouarbbfpmhphgczxtdygahgufxgewkblkgjwlqxxtgpjjavtoyjfgslppqihzfxoebwiiekfzlcloaqjuljoyhssmbbgwhzanvoiipyrbrtdjqdjjoqkcxwdnbbtyvxlytapgveatxsonpnynqfudbbhhvwepyeydohnlxkzdnwrhduwujumwwviiwzxiviuqdrhymncyefuapnhotkhkgdnpsaknuaghjzsmjbmhvtreqedgxhlzwifuskdqvelnmimithbhdbwvhdfyhjoqihortdjdbwxemeayxgyqxohfdmyuxxnojazrsghplwmlrecwwutlrttvlbhyoorglgowuxnxhmhyfaacqekthsjw"sv;
   constexpr std::string_view expected = "krkrallexxfolgendesistsofortbekanntzugebenxxichhabefolgendenbefehlerhaltenxxjansterledesbisherigxnreichsmarschallsjgoeringjsetztderfuehrersieyhvrrgrzssadmiralyalsseinennachfolgereinxschriftlschevollmachtunterwegsxabsofortsollensiesaemtlichemassnahmenverfuegenydiesichausdergegenwaertigenlageergebenxgezxreichsleiteikktulpekkjbormannjxxobxdxmmmdurnhfkstxkomxadmxuuubooiexkp"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -295,7 +295,7 @@ TEST(EnigmaM4Tests, P1030682)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "piarmjtbfrgmebdsbogcrvbcoxyohrwdlqixqycxzskflqmsimtqbnzdtxdqivfuygliatlerqyqksixmmzukztvfcjppfvgzgoe"sv;
   constexpr std::string_view expected = "fffddduuumstvinvonhakfroennelqaufgggzwonulzwoneuxuubzwovomzwoachtxvserxxjhrchtjhiernichteinzelgufenf"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -309,7 +309,7 @@ TEST(EnigmaM4Tests, P1030683)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "pjvsrppqdgkldenenwljlymarzjgdkdpftkrkwfbvzsvcngilvuwqrvydnqpjdhitdkodtssoqaajsjsgzwexujjwjazeycascaq"sv;
   constexpr std::string_view expected = "gruppenmarymhmituuudreinulzwovirunbuugzwofunfdreiochtnachtravemuevdevvvuuudreinuleinsvirkkmarbachkkm"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -323,7 +323,7 @@ TEST(EnigmaM4Tests, P1030684)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "rfbywkikeldchbsxunfjfsnrrvfwasxylqcqfadyjxntbmvlrdcgulowhtbgwussoqhgayedkmjdngvznzfoxfkmibkqnxfdwfivgcymjvqckyqfbhykzscj"sv;
   constexpr std::string_view expected = "vvvuuuvirsobennuleinsxxmituuuvirsibennulzwoyvirsibennuldreiyzwodreisechseinsyzwodreidreiachteinsdreioitnachwzstenpassirt"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -337,7 +337,7 @@ TEST(EnigmaM4Tests, P1030685)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "fcjynblbwhtrxxwpixglgosslkcfxbfiernbtnnwdprxgbeqcxwxspalaxwzkkqgeydwajcoigvkqqchkpvldxptzofebrdoiemukgcncekiclldegcxmnpdmipuuxhjgrdzaruwdroufyfviuqfefurwgmbpvmgdlgvnunpkfkgsyahexxwurjxnjtsrqwbrdsjubvlrsydpcmelcvccmgvrnvreyqigzibwgil"sv;
   constexpr std::string_view expected = "komxadmxuuubooteysssmcmhhhsssosthfxdxufhostvonvonchefvierteuudflottxswgnemuendeankeraufxmarschnachhoerupyyhaffangetretenxstellenynswinemuendehabenxzusatzfuerleitungxxgusnavfritzuebelstelltgegenstellenverkehrabzwonullnullnulluhreinbt"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -351,7 +351,7 @@ TEST(EnigmaM4Tests, P1030686)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "iaaoveuexxpjyraewtcukipwratczapvsmymwtehsxrvtrhcftesboehkvgnfclvwdjxqosqnkbgzyllgzlcvuqlqbmadlqekvbfriea"sv;
   constexpr std::string_view expected = "spruchschliesselvonffftttmiluhrzeitgrupseeinszwozhoviersofortwergebenydaffftttnichtzuloesenfunkleitungxz"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -365,7 +365,7 @@ TEST(EnigmaM4Tests, P1030687)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "gcmalctwampleigdfczlugvywbetkrmlfnjexrzmtyscuiwqkhfyujaskiqdzpdqhzgonwvnbksfymyjpftpajzciambzpkaqysxdwsxrkkupnbcmbrfpvfkgzbvxvydaulnwlazxtghsqmdthshevlvwslu"sv;
   constexpr std::string_view expected = "neissefurkcrvxkptxheilmanndvvfangbtxzwovierxxxelabgabedurchgefuhrtxkuriermitscaluevselmitcelnochnichteeugetroffenxfrggesolliqhhierwzrtwnojsrwarnemgndqffhenm"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -379,7 +379,7 @@ TEST(EnigmaM4Tests, P1030688)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "nzeezplzmgwwmxiubhwvclfcukvrjfvjhbsejlacvqknquhtxuqijtchsuumbcfqculagjacnzduggpmfpvbnngahbopalebvqhfbdwsbaqbgnoknbnmriydaznpunbpatlwpclildtszinjmhsngflwvtjyxbssnmohkdxcbnpifcfvdhztxycfsbhrequicsstjfamfjaqjfduzvjtcveuglmerrhlcwfsiainjonbjsacybfqtlyakghiqtnmuichacsryufirdwyidfdgwtuoqbgcisypwfcmpepcemubdxhrljibatrcrlmpjztzrvfikrndkelygicjudealjdjjheomuxauuajiuspeihjuzfmudyktkhfajsvijwlfdejnpcjvbupinrajwibpdngwlyuqgvddegdkruzkqibmdsdgbnqcbslgplhojjcnzpvornzfivudirpcoxoqxf"sv;
   constexpr std::string_view expected = "uuuyystuetzpunktwesermuendeytttfffeinsfunfyttcfffeinssibenvonvonfxdxuuuostvvvoooxxaufdortxfffttteinsfunfvierneunyyzwoneunvomzgoneunxvierxxeinskkvondenfunfnzltonmeqxerfuegbarenhrovijdtetwadreinultonnenmoeglichstvollstaendigeuuuyybootsausrupstunpenzmsammenstellenundmittttfffeinsfunfnnchhqlgolrndverlagernxzwokkrestproviantvonetwazwonultonnenmittttffftinssibenanjsaarjrenwsburgabgebenxzusatzvuertttfffeinsfunfundtttfffeinssibenxxsofortauslaufennachwesermuendexbestaetigencwq"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -393,7 +393,7 @@ TEST(EnigmaM4Tests, P1030689)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "dunkcanqmigsfkqxuwstqdkqesdjgkyywbskxaxcgzmutakeqbnqwxenuxtdfojnepdjmirzggaaamkwzmfkoskoyebkffpdimtlgyaqsrzgqvodylsfebcewhbvlfhywcronyfufvozvforzsqimsrcxsrzqfwzuatzdoampmfowxnmcdiyymtyxbnl"sv;
   constexpr std::string_view expected = "leitungvonvoneinsneunxuuuflottfffttteinszwozwovieryysezhszwohiergeloestxverschluesseltnachrrrhhhvvvxinhaltxxuuucaakkkvonvonwoewezwonxeinsdreieinsfuenfbhransteuerungslonnejfehmarnsuedwestju"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -407,7 +407,7 @@ TEST(EnigmaM4Tests, P1030690)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "eqtnqsdbfjhwgkhphxefoygezpjmhzcikpcimpsiguzmgtiwbrtfwejtdiljjdpjvmbvuxkgsvxpezerjxzfwwvcpssfkxbsitwfkobjxxyzdyjs"sv;
   constexpr std::string_view expected = "uuuvirsibennuleinsananeinsnulxsssdddxxerbitteweitergeleitvonroteinsdreiaaanachhoeruphaffamzwoofunfxnuldreiuhrrlt"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -421,7 +421,7 @@ TEST(EnigmaM4Tests, P1030691)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "iyqmowapyiyeolewbezyrvlfrceowtryqiyfrasbsaxyymvdcejjdfuivjmonuagmswjmyitcdqfhnynpobwfaitlhnt"sv;
   constexpr std::string_view expected = "viruufflottlxvvvuuuvirsiuennuleinsxxerbittejkieljfuerschleifenfahrteinsvirtageueberfaelligtk"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -435,7 +435,7 @@ TEST(EnigmaM4Tests, P1030692)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "hdqqrdlcwfzvivcruicvnhdqislnmwcoixtbgpmkkqbgvhclelodactdlcjzpsxxctibewomjskpwvbvqcteijtjzsibksvikhwzovqojqttplkm"sv;
   constexpr std::string_view expected = "diefunkspruechemituhrzeitjruppeneinsneunzwoeinsyyeinsfunffunfzwosindnichtgeloestwordenxneuhergebenvvvfunkoeitung"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -449,7 +449,7 @@ TEST(EnigmaM4Tests, P1030693)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "nrnrsecndekhlhjimhlccoilhtwsmpxsgpgfteuburwwmszmpenlqayeojcqtzeyrmhytdufbzywmfvqesqgywtohwkdsumorbgzirjeewcqkbuzjyjrgopxdtwuenuiokvtdvnrvewkdnp.jaf.....wltpqayu.xfpx.uahktqtvyouzkmzyehvrsrgjjyizuphkxbpbpwkuruygxhgklj"sv;
   constexpr std::string_view expected = "komxadmxuuubooteyfxdxuuuausbxvonvonjottowuenschexxueberwegzwoywegdreiundwegvieralleinmarschnachjneustadtjangetretenxmarschfahrteinszwosmschaltu.ggr.....enundnnn.bbxn.rwegenkarteninwarnemuendeuedrostocknichtbekommenxp"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -463,7 +463,7 @@ TEST(EnigmaM4Tests, P1030694)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "vbbhsytwzeedgkycakyvwbwuuzvzigctbzlzyuhywilfyupbipcm"sv;
   constexpr std::string_view expected = "pllevonvonzehnxsidixxhafenwarnemuendefeindbesetztchv"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -477,7 +477,7 @@ TEST(EnigmaM4Tests, P1030695)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "wfakacriwufsrwtorgfonhjtjxwyxzbraaboiukozpzbsvnhraazpzyhavszcdejguiqgwxbbmzzgcbfuglkecwm"sv;
   constexpr std::string_view expected = "leitungvvvuuuifuexzpktxwwwhavenxxffftttzwonuleinsdreierledigtxinhaatxxfffttteinszwozwovi"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -491,7 +491,7 @@ TEST(EnigmaM4Tests, P1030696)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "dzwssuyrttvlnzntrvslzqowrtxyrzvxrrcdttfanrwkiwkgldcjdespeeciuonjprpbzoxikpfdqboujdfaftxksjcqdccrcxvlzrpa"sv;
   constexpr std::string_view expected = "toniananchefzwosechsuuuflottxxumuzwvdreisechszwobeipositioneinszwodoragetroffenxfolgeverbandmitgggsieben"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -505,7 +505,7 @@ TEST(EnigmaM4Tests, P1030697)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "wtrtbzbrbwceugzrplprvioohfijhiranyqpktcwpogofzyoyyzdwjzvfcdupzifizguedvehwpv"sv;
   constexpr std::string_view expected = "fxdxuuuvstvvvtttfffeinssibenxxffftsaeinsneunzwosibenlyachtneunxicdbestaikigt"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -519,7 +519,7 @@ TEST(EnigmaM4Tests, P1030698)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "vidtgybspaxvedjfkonpmxhtcnaafkxiowvczxutdgfsewgfaidhpkqvaraguaupwvrbfowo"sv;
   constexpr std::string_view expected = "tttfffzwoviervvvfxdxuuuxausbxxtravemuendebleibenxweiterebefehleatwartknx"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -533,7 +533,7 @@ TEST(EnigmaM4Tests, P1030701)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "itwjpxtcnniwzbgaknwcpftkehwpdjlvzwtwshkumyzzamnlmhvtvptsclaoaxevaoqnoafomcsaiuglzynpdebqf"sv;
   constexpr std::string_view expected = "zwodreonulnuluhrtravemuendereedeausohnegeleitnachjkieljaufwegdreiysechsyeinsxmarschfahrte"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -547,7 +547,7 @@ TEST(EnigmaM4Tests, P1030702)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "byiagvwlqkwnhfiepincohsnbkwsbrhxanecjwlgsmdmodulqagnqmodyskqvkqzjogujoszjlxpfolwykkqsxtshp"sv;
   constexpr std::string_view expected = "uuufunfdreivierkknollaukkananfunfuuuflottxnuleinszwonulbeirotnulsibengeankertxzumweitermar"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -561,7 +561,7 @@ TEST(EnigmaM4Tests, P1030704)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "nywnbupripmnkaymlxvpmfmgtxgqekvpnxwoknkymvrhmlglqurjppsuphyzvqunkcfsxcwnefmvnfhwqwpffjcndcrgmxagwopcfqcynhwiqprooznlwqwu"sv;
   constexpr std::string_view expected = "travemuendeyyreedemitujudreinulzwovierunduuuzwofunfdreiacrtgeankertxffftttbleibubesetztpvvvuuudreinuleinsvieytdkarbachkk"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -575,7 +575,7 @@ TEST(EnigmaM4Tests, P1030705)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "hvjxgdxresssxplxqlkzicekwu.zhwsjtbjubrummrdopktggqzcwrayapskzxbylxhbotjakoppzhakdtxyebokmwvstwtjxymnpntxhgfebpmpiqyjhlsgmmaapmmloxvkioyxqjb.ia..umt.ftx.fkldhptqimcbmzjfrbnv........................pwjvrphvwdteat.dwphwvjfdegekbxg.ajctvvzohici"sv;
   constexpr std::string_view expected = "uuuviersiebennuleinsyuuuvp.rsiebeneinszwoyuuudreinuleinsneunyfuenfxuuuflyttxnachrxqduuuausbxxxinabaenderungffftttvomdreinulxvierxuebernimmt.bl..jra.kym.uuviersibbennuueeesn........................ebeneinszwoxxv.nvonkomxadmxuqrw.otepppeinsxo"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -589,7 +589,7 @@ TEST(EnigmaM4Tests, P1030706)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "byiagvwlqkwnbhiepingohsnbkwsbrhxanecjwlgsmdmodulqagnqmodyskqvkqzjogujoszjlxpfolwykkqsxtshpcgyitekustbluzcujnfdrxgfnbwuqzdvvlujzn"sv;
   constexpr std::string_view expected = "uuufunfdreivwmrkknojlaukkananfunfuuuflottxnuleinszwonulbeirotnulsibengeankertxzumweitermarschnachtrjvemuendeerwarteqeleitjlechjm"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -603,7 +603,7 @@ TEST(EnigmaM4Tests, P1030707)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "nywnbupripmnkrumlxvpmfogtxgqekvplxwoknkymvrhmlglqurjpihupfyzvqunkcfsxcwnefmvnfhpqwpfcjcrdcrgmxagwopgfqcynhliqprooznlwq..d..."sv;
   constexpr std::string_view expected = "travemuendeyyajedemituuudreinulzoovierunduuuzwofunfdrtlacbtgeankertxffftttbleibtbeseoztxvvvuuudreinkleinsvyeytdkarbach..k..."sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -617,7 +617,7 @@ TEST(EnigmaM4Tests, P1030708)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "vzgljklveoeitylrohkvjomqriffcvuituztpelmtxbtbzxxaabwlkbqulyxddmugierricezrrdpzzhepalwgekczvfhjikkdkosokqddwsiuhqgdercjypukozhytjyxungnfdggp.qtm."sv;
   constexpr std::string_view expected = "fxdxuuuostvonvontttfffeinssibenxxdurchkerztegerunginderschleuseerstnulzwondlnuluhrmfttttfffexnsfuenfbuunsbuettelausxbeabsichtiyecuxhavenzug.hen."sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -631,7 +631,7 @@ TEST(EnigmaM4Tests, P1030709)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "vdtlyzainsdvhvdpkwygayhobiligmyxmsedqsrarvdlkalgfhandfyubejvxxnmceoidjsjysyieldayslzfuljnlocecmjcejglnpklfvfffskwacysldxjgfhunwajle.xhy.geb.qts.quu."sv;
   constexpr std::string_view expected = "funkspruchmituhrzeitgruppezwozwozwoeinshiersehrverstuemmeltundchviernulxgruppevollkommenunklarxnachpruefenusdneuverschluesseltabset.enx.fun.lei.ung."sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -645,7 +645,7 @@ TEST(EnigmaM4Tests, P1030710)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "dxersszklrohuryimndpiaqwwydrmeosjwtffkiptwemnufkoxtklojykighcfwfffhlosfibgwidqvqyxqkrphi.kjq"sv;
   constexpr std::string_view expected = "komxadmxuuubooteyfuenfxuuuflottxyvierxuuuflottxvvvuuudreinuldreinulkkluttmannkkxxmituuud.ein"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -659,7 +659,7 @@ TEST(EnigmaM4Tests, P1030711)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "dlsmybzrapxzjhsegrmddu.oarwgdalkguddnrvjzilrzqnssxndgrseemnathcezbhrcekwgkozundkerarve.lxwpycumncznj"sv;
   constexpr std::string_view expected = "funfuuuflottxvonvonzwo.echsuuuflottxxvoraussichtlicheseintreffenuuuzwodreisechsfunfink.eldreixfunfxm"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -673,7 +673,7 @@ TEST(EnigmaM4Tests, P1030712)
   m4.setRingstellung('a', 'a', 'c', 'u');
   constexpr std::string_view input    = "eflpbhcfkmrpfqyxageduvasmxlymbprytwszmjchzivdjybpmnhrapdlztabqhfiosbqiblrwowaovsciibzddrenhdgkvpczguwmco"sv;
   constexpr std::string_view expected = "xuuuflottxvvvuuufunfdreivierkknollaukkeinsachtuhrimgeleitvvvzwonuleinsviervonrotnuleinsbisrotnulsiebenfh"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
 
@@ -687,6 +687,6 @@ TEST(EnigmaM4Tests, P1030713)
   m4.setRingstellung('a', 'a', 'f', 'b');
   constexpr std::string_view input    = "mpsanxaasrpbmxmnjmjyypugpfzoyaeqievwioxhrvjeckafvasoielmfybygabxmywoivimkgba"sv;
   constexpr std::string_view expected = "leitungvvvuuustuetzpktxwwwhavenxxfffttteunszwozwovierhuermitvrrhhhvvvgeloest"sv;
-  std::string output = decrypt(m4, input);
+  std::string                output   = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
