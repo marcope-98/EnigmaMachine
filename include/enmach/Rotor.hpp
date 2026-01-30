@@ -98,7 +98,7 @@ namespace enmach
     template<class T>
     constexpr auto setInitialPosition(T initial_position) -> void
     {
-      if constexpr (std::is_same_v<std::remove_cv<std::remove_reference_t<T>>, char>)
+      if constexpr (std::is_same_v<T, char>)
         this->position_ = static_cast<std::uint8_t>(initial_position - 'a');
       else
         this->position_ = static_cast<std::uint8_t>(initial_position);
@@ -108,7 +108,7 @@ namespace enmach
     template<class T>
     constexpr auto setRingstellung(T ringstellung) -> void
     {
-      if constexpr (std::is_same_v<std::remove_cv<std::remove_reference_t<T>>, char>)
+      if constexpr (std::is_same_v<T, char>)
         this->ringstellung_ = static_cast<std::uint8_t>(ringstellung - 'a');
       else
         this->ringstellung_ = static_cast<std::uint8_t>(ringstellung);
