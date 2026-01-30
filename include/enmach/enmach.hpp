@@ -19,6 +19,14 @@ namespace enmach
           3>,
       Args...>;
 
+  template<class... Args>
+  using EnigmaM3 = EnigmaMachine<
+      EnigmaMachineConfiguration<
+          Set<I, II, III, IV, V, VI, VII, VIII>,
+          Set<UKW_A, UKW_B, UKW_C>,
+          3>,
+      Args...>;
+
   template<class Plugboard, class Reflector, class Zusatzwalze, class... Rotors>
   using EnigmaM4 = std::enable_if_t<
       (std::is_same_v<Zusatzwalze, BETA> || std::is_same_v<Zusatzwalze, GAMMA>) && /* Zusatzwalze must be either gamma or beta*/
