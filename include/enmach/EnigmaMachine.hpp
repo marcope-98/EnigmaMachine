@@ -37,7 +37,7 @@ namespace enmach
     }
 
     template<class... Args>
-    constexpr auto setGrundstellungs(Args &&...args) -> void
+    constexpr auto setGrundstellung(Args &&...args) -> void
     {
       static_assert(Config::N == (sizeof...(Args)));
       assign_grundstellung(this->rotors, std::make_tuple(args...));

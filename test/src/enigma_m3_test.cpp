@@ -39,7 +39,7 @@ TEST(EnigmaM3Tests, I_II_III_UKWB_noPlugboard_encrypt)
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
   enmach::EnigmaM3<Plugboard<PlugboardValue>, ukw::B, I, II, III> m3;
-  m3.setGrundstellungs('a', 'a', 'a');
+  m3.setGrundstellung('a', 'a', 'a');
   m3.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "nvkzhgdhmangsvksyiznoxqgknszoxbuiwoqueocihvvklgkgaemkxlpwlvg"sv;
   constexpr std::string_view expected = "yumjmzfvotepjpqditfzltartgrujaxlwlbdfqdxdluynqrmioznrebwtgqs"sv;
@@ -53,7 +53,7 @@ TEST(EnigmaM3Tests, I_II_III_UKWB_noPlugboard_decrypt)
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
   enmach::EnigmaM3<Plugboard<PlugboardValue>, ukw::B, I, II, III> m3;
-  m3.setGrundstellungs('a', 'a', 'a');
+  m3.setGrundstellung('a', 'a', 'a');
   m3.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "yumjmzfvotepjpqditfzltartgrujaxlwlbdfqdxdluynqrmioznrebwtgqs"sv;
   constexpr std::string_view expected = "nvkzhgdhmangsvksyiznoxqgknszoxbuiwoqueocihvvklgkgaemkxlpwlvg"sv;
@@ -67,7 +67,7 @@ TEST(EnigmaM3Tests, ring_settings_encrypt)
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
   enmach::EnigmaM3<Plugboard<PlugboardValue>, ukw::B, I, II, III> m3;
-  m3.setGrundstellungs('a', 'a', 'a');
+  m3.setGrundstellung('a', 'a', 'a');
   m3.setRingstellung('h', 'l', 'k');
   constexpr std::string_view input    = "nvkzhgdhmangsvksyiznoxqgknszoxbuiwoqueocihvvklgkgaemkxlpwlvg"sv;
   constexpr std::string_view expected = "ytwhpkbalvphboikmyhuhzfulmueyuipzmsczlhvpbbofpuyfivqblohtiuu"sv;
@@ -81,7 +81,7 @@ TEST(EnigmaM3Tests, ring_settings_decrypt)
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
   enmach::EnigmaM3<Plugboard<PlugboardValue>, ukw::B, I, II, III> m3;
-  m3.setGrundstellungs('a', 'a', 'a');
+  m3.setGrundstellung('a', 'a', 'a');
   m3.setRingstellung('h', 'l', 'k');
   constexpr std::string_view input    = "ytwhpkbalvphboikmyhuhzfulmueyuipzmsczlhvpbbofpuyfivqblohtiuu"sv;
   constexpr std::string_view expected = "nvkzhgdhmangsvksyiznoxqgknszoxbuiwoqueocihvvklgkgaemkxlpwlvg"sv;
@@ -95,7 +95,7 @@ TEST(EnigmaM3Tests, rotor_settings_encrypt)
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
   enmach::EnigmaM3<Plugboard<PlugboardValue>, ukw::B, I, II, III> m3;
-  m3.setGrundstellungs('h', 'l', 'k');
+  m3.setGrundstellung('h', 'l', 'k');
   m3.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "nvkzhgdhmangsvksyiznoxqgknszoxbuiwoqueocihvvklgkgaemkxlpwlvg"sv;
   constexpr std::string_view expected = "gzbseaxdrvmddsqinjkjjqkkyiydsjfgymhcsvcupluyfakbymyezdyyuxfm"sv;
@@ -109,7 +109,7 @@ TEST(EnigmaM3Tests, rotor_settings_decrypt)
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
   enmach::EnigmaM3<Plugboard<PlugboardValue>, ukw::B, I, II, III> m3;
-  m3.setGrundstellungs('h', 'l', 'k');
+  m3.setGrundstellung('h', 'l', 'k');
   m3.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "gzbseaxdrvmddsqinjkjjqkkyiydsjfgymhcsvcupluyfakbymyezdyyuxfm"sv;
   constexpr std::string_view expected = "nvkzhgdhmangsvksyiznoxqgknszoxbuiwoqueocihvvklgkgaemkxlpwlvg"sv;
@@ -123,7 +123,7 @@ TEST(EnigmaM3Tests, plugboard_encrypt)
   struct PlugboardValue{ std::string_view value = "zbcdrwghuylkmnopqestivfxja"sv; };
   // clang-format on
   enmach::EnigmaM3<Plugboard<PlugboardValue>, ukw::B, I, II, III> m3;
-  m3.setGrundstellungs('a', 'a', 'a');
+  m3.setGrundstellung('a', 'a', 'a');
   m3.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "nvkzhgdhmangsvksyiznoxqgknszoxbuiwoqueocihvvklgkgaemkxlpwlvg"sv;
   constexpr std::string_view expected = "jibgmawvodrpypvdggpaktzeggehyzxxmvbdzidxvkijgveaudznirwfnhqs"sv;
@@ -137,7 +137,7 @@ TEST(EnigmaM3Tests, plugboard_decrypt)
   struct PlugboardValue{ std::string_view value = "zbcdrwghuylkmnopqestivfxja"sv; };
   // clang-format on
   enmach::EnigmaM3<Plugboard<PlugboardValue>, ukw::B, I, II, III> m3;
-  m3.setGrundstellungs('a', 'a', 'a');
+  m3.setGrundstellung('a', 'a', 'a');
   m3.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "jibgmawvodrpypvdggpaktzeggehyzxxmvbdzidxvkijgveaudznirwfnhqs"sv;
   constexpr std::string_view expected = "nvkzhgdhmangsvksyiznoxqgknszoxbuiwoqueocihvvklgkgaemkxlpwlvg"sv;
@@ -151,7 +151,7 @@ TEST(EnigmaM3Tests, reflector_encrypt)
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
   enmach::EnigmaM3<Plugboard<PlugboardValue>, ukw::C, I, II, III> m3;
-  m3.setGrundstellungs('a', 'a', 'a');
+  m3.setGrundstellung('a', 'a', 'a');
   m3.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "nvkzhgdhmangsvksyiznoxqgknszoxbuiwoqueocihvvklgkgaemkxlpwlvg"sv;
   constexpr std::string_view expected = "zgwgwykjxsziqfjrebgjmikuopebuvukrfjomipslppeuzxilwaieuxjomzi"sv;
@@ -165,7 +165,7 @@ TEST(EnigmaM3Tests, reflector_decrypt)
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
   enmach::EnigmaM3<Plugboard<PlugboardValue>, ukw::C, I, II, III> m3;
-  m3.setGrundstellungs('a', 'a', 'a');
+  m3.setGrundstellung('a', 'a', 'a');
   m3.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "zgwgwykjxsziqfjrebgjmikuopebuvukrfjomipslppeuzxilwaieuxjomzi"sv;
   constexpr std::string_view expected = "nvkzhgdhmangsvksyiznoxqgknszoxbuiwoqueocihvvklgkgaemkxlpwlvg"sv;
@@ -179,7 +179,7 @@ TEST(EnigmaM3Tests, rotors_encrypt)
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
   enmach::EnigmaM3<Plugboard<PlugboardValue>, ukw::B, VI, III, VIII> m3;
-  m3.setGrundstellungs('a', 'a', 'a');
+  m3.setGrundstellung('a', 'a', 'a');
   m3.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "nvkzhgdhmangsvksyiznoxqgknszoxbuiwoqueocihvvklgkgaemkxlpwlvg"sv;
   constexpr std::string_view expected = "gxtqyeixxntxjmbbmsvadvywrfxkxcjfoxlczwysuvgxibcxsskxgqkrlxur"sv;
@@ -193,7 +193,7 @@ TEST(EnigmaM3Tests, rotors_decrypt)
   struct PlugboardValue{ std::string_view value = "abcdefghijklmnopqrstuvwxyz"sv; };
   // clang-format on
   enmach::EnigmaM3<Plugboard<PlugboardValue>, ukw::B, VI, III, VIII> m3;
-  m3.setGrundstellungs('a', 'a', 'a');
+  m3.setGrundstellung('a', 'a', 'a');
   m3.setRingstellung('a', 'a', 'a');
   constexpr std::string_view input    = "gxtqyeixxntxjmbbmsvadvywrfxkxcjfoxlczwysuvgxibcxsskxgqkrlxur"sv;
   constexpr std::string_view expected = "nvkzhgdhmangsvksyiznoxqgknszoxbuiwoqueocihvvklgkgaemkxlpwlvg"sv;
@@ -207,7 +207,7 @@ TEST(EnigmaM3Tests, all_together_encrypt)
   struct PlugboardValue{ std::string_view value = "zbcdrwghuylkmnopqestivfxja"sv; };
   // clang-format on
   enmach::EnigmaM3<Plugboard<PlugboardValue>, ukw::C, VI, III, VIII> m3;
-  m3.setGrundstellungs('h', 'l', 'k');
+  m3.setGrundstellung('h', 'l', 'k');
   m3.setRingstellung('h', 'l', 'k');
   constexpr std::string_view input    = "nvkzhgdhmangsvksyiznoxqgknszoxbuiwoqueocihvvklgkgaemkxlpwlvg"sv;
   constexpr std::string_view expected = "vinnjluztqxkpqlthluanqvljpankrdljtvhevnrkidyvschxisntajnacmo"sv;
@@ -222,7 +222,7 @@ TEST(EnigmaM3Tests, all_together_decrypt)
   struct PlugboardValue{ std::string_view value = "zbcdrwghuylkmnopqestivfxja"sv; };
   // clang-format on
   enmach::EnigmaM3<Plugboard<PlugboardValue>, ukw::C, VI, III, VIII> m3;
-  m3.setGrundstellungs('h', 'l', 'k');
+  m3.setGrundstellung('h', 'l', 'k');
   m3.setRingstellung('h', 'l', 'k');
   constexpr std::string_view input    = "vinnjluztqxkpqlthluanqvljpankrdljtvhevnrkidyvschxisntajnacmo"sv;
   constexpr std::string_view expected = "nvkzhgdhmangsvksyiznoxqgknszoxbuiwoqueocihvvklgkgaemkxlpwlvg"sv;
