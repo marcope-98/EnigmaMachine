@@ -444,8 +444,8 @@ TEST(EnigmaM4Tests, P1030693)
   enmach::EnigmaM4<Plugboard<PlugboardValue>, UKW_b, GAMMA, IV, III, VIII> m4;
   m4.setInitialRotorPosition('l', 'p', 'w', 'j');
   m4.setRingstellung('a', 'a', 'c', 'u');
-  constexpr std::string_view input    = "nrnrsecndekhlhjimhlccoilhtwsmpxsgpgfteuburwwmszmpenlqayeojcqtzeyrmhytdufbzywmfvqesqgywtohwkdsumorbgzirjeewcqkbuzjyjrgopxdtwuenuiokvtdvnrvewkdnp"sv;
-  constexpr std::string_view expected = "komxadmxuuubooteyfxdxuuuausbxvonvonjottowuenschexxueberwegzwoywegdreiundwegvieralleinmarschnachjneustadtjangetretenxmarschfahrteinszwosmschaltu"sv;
+  constexpr std::string_view input    = "nrnrsecndekhlhjimhlccoilhtwsmpxsgpgfteuburwwmszmpenlqayeojcqtzeyrmhytdufbzywmfvqesqgywtohwkdsumorbgzirjeewcqkbuzjyjrgopxdtwuenuiokvtdvnrvewkdnp.jaf.....wltpqayu.xfpx.uahktqtvyouzkmzyehvrsrgjjyizuphkxbpbpwkuruygxhgklj"sv;
+  constexpr std::string_view expected = "komxadmxuuubooteyfxdxuuuausbxvonvonjottowuenschexxueberwegzwoywegdreiundwegvieralleinmarschnachjneustadtjangetretenxmarschfahrteinszwosmschaltu.ggr.....enundnnn.bbxn.rwegenkarteninwarnemuendeuedrostocknichtbekommenxp"sv;
   std::string output = decrypt(m4, input);
   ASSERT_EQ(expected, output);
 }
