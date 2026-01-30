@@ -5,6 +5,20 @@ The goal is to simulate the machine's mechanical and electrical behaviour as fai
 
 Overall this process was achieved consulting [historical documentation](https://www.cryptomuseum.com/crypto/enigma/wiring.htm) about the different models of enigma machine and validating the result with a comprenhensive test suite for the [Enigma 1](https://github.com/MaxAnderson95/pyenigma), [Enigma M3](https://github.com/weavc/enigma), and [Enigma M4](https://enigma.hoerenberg.com/).
 
+## Dependencies
+- C++17 or newer
+- [googletest 1.17.x](https://github.com/google/googletest/tree/v1.17.x)
+
+## Build
+```bash
+$ git clone https://github.com/marcope-98/enigma-machine.git
+$ cd enigma-machine
+$ mkdir build && cd build
+$ cmake ..
+$ make -j4
+$ ./test/enigma_machine_tests # Run the tests
+```
+
 ## Features
 ### Plugboard (Steckerbrett)
 The plugboard (Steckerbrett) was the first stage of substitution in the Enigma's encryption path and one of the most important contributors to its cryptographic strength.
@@ -108,19 +122,7 @@ The reflector is the component that made the Enigma machine symmetric meaning th
 The reflector receives the signal from the leftmost rotor, maps each letter to another letter via fixed substitution (similarly to the plugboard) and sends back the signal through the rotors in reverse order.
 
 Differently from the plugboard however, no letter maps to itself. This aspect guarantees that the encryption is involutive (i.e. $E(E(x)) = x$) and there is no fixed point (no letter ever encypts to itself).
-## Dependencies
-- C++17 or newer
-- [googletest 1.17.x](https://github.com/google/googletest/tree/v1.17.x)
 
-## Build
-```bash
-$ git clone https://github.com/marcope-98/enigma-machine.git
-$ cd enigma-machine
-$ mkdir build && cd build
-$ cmake ..
-$ make -j4
-$ ./test/enigma_machine_tests # Run the tests
-```
 ## Tests
 A comprehensive test suite for each of the enigma machines implemented (M1, M3 and M4) were written using the googletest framework.
 
