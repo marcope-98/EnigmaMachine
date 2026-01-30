@@ -3,6 +3,8 @@
 
 #include <array>
 #include <cstdint>
+#include <type_traits>
+
 
 #include "enmach/common.hpp"
 
@@ -26,7 +28,6 @@
 #define RLFOBVUXHDSANGYKMPZQWEJICT "\x11\x0b\x05\x0e\x01\x15\x14\x17\x07\x03\x12\x00\x0d\x06\x18\x0a\x0c\x0f\x19\x10\x16\x04\x09\x08\x02\x13"
 #define FSOKANUERHMBTIYCWLQPZXVGJD "\x05\x12\x0e\x0a\x00\x0d\x14\x04\x11\x07\x0c\x01\x13\x08\x18\x02\x16\x0b\x10\x0f\x19\x17\x15\x06\x09\x03"
 #define ELPZHAXJNYDRKFCTSIBMGWQVOU "\x04\x0b\x0f\x19\x07\x00\x17\x09\x0d\x18\x03\x11\x0a\x05\x02\x13\x12\x08\x01\x0c\x06\x16\x10\x15\x0e\x14"
-
 
 namespace enmach::rotor_tags
 {
@@ -97,7 +98,7 @@ namespace enmach
     template<class T>
     constexpr auto setInitialPosition(T initial_position) -> void
     {
-      if constexpr (std::is_same_v<T, char>)
+      if constexpr (std::is_same_v<std::remove_cv<std::remove_reference_t<T>>, char>)
         this->position_ = static_cast<std::uint8_t>(initial_position - 'a');
       else
         this->position_ = static_cast<std::uint8_t>(initial_position);
@@ -107,7 +108,7 @@ namespace enmach
     template<class T>
     constexpr auto setRingstellung(T ringstellung) -> void
     {
-      if constexpr (std::is_same_v<T, char>)
+      if constexpr (std::is_same_v<std::remove_cv<std::remove_reference_t<T>>, char>)
         this->ringstellung_ = static_cast<std::uint8_t>(ringstellung - 'a');
       else
         this->ringstellung_ = static_cast<std::uint8_t>(ringstellung);
