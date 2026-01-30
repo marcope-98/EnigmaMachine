@@ -27,12 +27,7 @@ namespace enmach
     static_assert((Config::Rotors::template is_in_set<RotorTags>() && ...));
     static_assert((Config::Reflectors::template is_in_set<ReflectorTag>()));
 
-    auto increment() -> void
-    {
-      auto flag{true};
-      std::apply([&flag](auto &&...args)
-                 { ((flag = args.increment(flag)), ...); }, this->rotors);
-    }
+    auto increment() -> void { increment_rotors(this->rotors); }
 
     template<class... Args>
     constexpr auto setRingstellung(Args &&...args) -> void
@@ -67,8 +62,22 @@ namespace enmach
     Reflector<ReflectorTag>                                    reflector{};
     Plugboard                                                  plugboard{};
 
+    template<class Tuple, std::size_t... Is>
+    constexpr static auto increment_rotors_impl(Tuple &&t, std::index_sequence<Is...>) -> void
+    {
+      auto           flag{true};
+      constexpr bool has_zusatzwalze = (Set<rotor_tags::BETA, rotor_tags::GAMMA>::template is_in_set<RotorTags>() || ...);
+      ((flag = std::get<Is>(t).increment(flag, Is < Config::N - static_cast<std::size_t>(has_zusatzwalze) - 1)), ...);
+    }
+
+    template<class Tuple>
+    constexpr static auto increment_rotors(Tuple &&t) -> void
+    {
+      increment_rotors_impl(std::forward<Tuple>(t), std::make_index_sequence<Config::N>{});
+    }
+
     template<class Tuple1, class Tuple2, std::size_t... Is>
-    constexpr static auto assign_initial_rotor_position_impl(Tuple1 &&t1, Tuple2 &&t2, std::index_sequence<Is...>)
+    constexpr static auto assign_initial_rotor_position_impl(Tuple1 &&t1, Tuple2 &&t2, std::index_sequence<Is...>) -> void
     {
       (std::get<Config::N - Is - 1>(t1).setInitialPosition(std::get<Is>(t2)), ...);
     }
